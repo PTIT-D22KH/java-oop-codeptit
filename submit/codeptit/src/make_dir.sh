@@ -17,8 +17,8 @@ if [ -d "$1" ]; then
 
     touch $filename
     # Use the directory name as the package name
-    # echo "package $1;" >> $filename
-    # echo "" >> $filename
+    echo "package $1;" >> $filename
+    echo "" >> $filename
     echo "public class $1_$count {" >> $filename
     echo "    public static void main(String[] args) {" >> $filename
     echo "        // Write your code here" >> $filename
@@ -33,8 +33,8 @@ else
 
     echo "## $1" >> README.md
     # Use the directory name as the package name
-    # echo "package $1;" >> $1.java
-    # echo "" >> $1.java
+    echo "package $1;" >> $1.java
+    echo "" >> $1.java
     echo "public class $1 {" >> $1.java
     echo "    public static void main(String[] args) {" >> $1.java
     echo "        // Write your code here" >> $1.java
