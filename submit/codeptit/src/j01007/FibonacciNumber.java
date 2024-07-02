@@ -1,4 +1,4 @@
-package j01006;
+package j01007;
 
 public class FibonacciNumber {
     private int n;//stt
@@ -10,11 +10,22 @@ public class FibonacciNumber {
             fibo[i] = fibo[i - 1] + fibo[i - 2];
         }
     }
+    
+    public FibonacciNumber() {
+
+    }
     public FibonacciNumber(int n) {
         this.n = n;
     }
     public long getNthFiboNumber(int n) {
         return fibo[n];
     }
-    
+    public boolean isFiboNumber(long x) {
+        for (int i = 0; i < 92; i++) {
+            if (fibo[i] == x) {
+                return true;
+            }
+        } 
+        return false;
+    }
 }
