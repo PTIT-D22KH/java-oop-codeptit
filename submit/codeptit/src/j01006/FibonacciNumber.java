@@ -2,8 +2,8 @@ package j01006;
 
 public class FibonacciNumber {
     private int n;//stt
-    private static long[]fibo = new long[92];
-    public void initFibo() {
+    private static final long[]fibo = new long[92];
+    static {
         fibo[0] = 0;
         fibo[1] = 1;
         for (int i = 2; i < 92; i++) {
@@ -12,7 +12,6 @@ public class FibonacciNumber {
     }
     public FibonacciNumber(int n) {
         this.n = n;
-        initFibo();
     }
     public long getNthFiboNumber(int n) {
         return fibo[n];
