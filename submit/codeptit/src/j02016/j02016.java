@@ -1,8 +1,8 @@
-package j02014;
+package j02016;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class j02014 {
+public class j02016 {
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         // Write your code here
@@ -10,28 +10,26 @@ public class j02014 {
         while (t-- > 0) {
             testCase();
         }
+
     }
     public static void testCase() {
         int n = input.nextInt();
-        int []a  = new int[n];
-        int sum = 0;
+        long []a = new long[n];
+        Set<Long> s = new HashSet<>();
         for (int i = 0; i < n; i++) {
-            a[i] = input.nextInt();
-            sum += a[i];
+            a[i] = input.nextLong();
+            a[i] *= a[i];
+            s.add(a[i]);
         }
-        int checkSum = 0;
+        Arrays.sort(a);
         for (int i = 0; i < n; i++) {
-            sum -= a[i];
-            
-            if (i != 0) {
-                if (sum == checkSum) {
-                    System.out.println(i + 1);
+            for (int j = i + 1; j < n; j++) {
+                if (s.contains(a[i] + a[j])) {
+                    System.out.println("YES");
                     return;
                 }
-            } 
-            checkSum += a[i];
+            }
         }
-        System.out.println(-1);
-        
+        System.out.println("NO");
     }
 }
