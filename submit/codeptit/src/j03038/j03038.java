@@ -14,5 +14,6 @@ public class j03038 {
             }
         }
         System.out.println(res);
+        input.close();
     }
 }
