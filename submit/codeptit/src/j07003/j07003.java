@@ -5,7 +5,8 @@ import java.math.BigInteger;
 public class j07003 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("j07003/DATA.in"));
+        // Scanner input = new Scanner(new File("j07003/DATA.in"));
+        Scanner input = new Scanner(new File("DATA.in"));
         String s = input.nextLine();
         if (s.length() == 1) {
             System.out.println(s);

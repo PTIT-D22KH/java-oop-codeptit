@@ -7,7 +7,8 @@ import java.io.IOException;
 public class j07002 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("j07002/DATA.in"));
+        // Scanner input = new Scanner(new File("j07002/DATA.in"));
+        Scanner input = new Scanner(new File("DATA.in"));
         long sum = 0;
         String s;
         while (input.hasNext()) {
