@@ -218,7 +218,7 @@
 											"top": 298,
 											"width": 317.8876953125,
 											"height": 13,
-											"text": "+Rectangle(double: width, double: height, color: String)",
+											"text": "+Rectangle(width: double, height: double, color: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -321,6 +321,7 @@
 											"top": 388,
 											"width": 317.8876953125,
 											"height": 13,
+											"underline": true,
 											"text": "+setColor(color: String): void",
 											"horizontalAlignment": 0
 										},
@@ -483,8 +484,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtnVmc9MuCFI="
 									},
-									"name": "double",
-									"type": "width"
+									"name": "width",
+									"type": "double"
 								},
 								{
 									"_type": "UMLParameter",
@@ -492,8 +493,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtnVmc9MuCFI="
 									},
-									"name": "double",
-									"type": "height"
+									"name": "height",
+									"type": "double"
 								},
 								{
 									"_type": "UMLParameter",
@@ -627,6 +628,7 @@
 								"$ref": "AAAAAAGQtnN/UNLgO6M="
 							},
 							"name": "setColor",
+							"isStatic": true,
 							"parameters": [
 								{
 									"_type": "UMLParameter",
