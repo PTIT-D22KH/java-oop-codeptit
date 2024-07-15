@@ -11,8 +11,13 @@ public class j04002 {
         height = input.nextDouble();
         width = input.nextDouble();
         color = input.next();
-        Rectangle a = new Rectangle(height, width, color);
-        System.out.printf("%d %d %s", (int)a.findPerimeter(), (int)a.findArea(), Rectangle.getColor());
+        if (height > 0 && width > 0) {
+            Rectangle a = new Rectangle(height, width, color);
+            System.out.printf("%d %d %s", (int)a.findPerimeter(), (int)a.findArea(), Rectangle.getColor());
+        } else {
+            System.out.println("INVALID");
+        }
+        
         input.close();
     }
 }

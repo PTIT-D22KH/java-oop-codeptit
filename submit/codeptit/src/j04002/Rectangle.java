@@ -13,7 +13,7 @@ public class Rectangle {
         this.height = height;
         Rectangle.color = color.toLowerCase();
     }
-    double getWidth() {
+    public double getWidth() {
         return width;
     }
     public void setWidth(double width) {
