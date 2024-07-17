@@ -1,7 +1,7 @@
-package j04001;
+package j04008;
+
 public class Point {
-    private double x;
-    private double y;
+    private double x, y;
 
     public Point() {
 
@@ -30,7 +30,7 @@ public class Point {
     }
     @Override
     public String toString() {
-        String res = "(" + String.valueOf(this.x) + "," + String.valueOf(this.y) + ")";
+        String res = "(" + this.x + "," + this.y + ")";
         return res;
     }
 }

@@ -426,7 +426,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtdcpgcgOt8c="
 									},
-									"name": "double x"
+									"name": "double x",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -434,7 +435,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtdcpgcgOt8c="
 									},
-									"name": "double y"
+									"name": "double y",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -461,7 +463,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtdhamsgfCkY="
 									},
-									"name": "Point p"
+									"name": "Point p",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -555,7 +558,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGQtd3WAchVYas="
 									},
-									"name": "Point p1"
+									"name": "Point p1",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
