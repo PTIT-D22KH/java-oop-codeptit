@@ -5,7 +5,7 @@ public class Triangle {
     private boolean isValid;
     private double perimeter;
     private double area;
-    private double areaOfCircumscribed;
+    private double areaOfCircumscribed; //dien tich duong tron ngoai tiep
     private double r; //ban kinh duong tron ngoai tiep
 
     private boolean checkValid() {
