@@ -5,7 +5,7 @@ public class Contestant {
     private String name, dob;
     double m1, m2, m3, totalScore;
     private static int count = 0;
-    public static final Comparator<Contestant> BY_TOTAL_SCORE = new Comparator<Contestant> () {
+    public static final Comparator<Contestant> BY_TOTAL_SCORE_DESC_ID_ASC = new Comparator<Contestant> () {
         @Override
         public int compare(Contestant a, Contestant b) {
             int compareScore = Double.compare(b.totalScore, a.totalScore);

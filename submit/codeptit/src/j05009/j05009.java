@@ -19,7 +19,7 @@ public class j05009 {
             m3 = Double.parseDouble(input.nextLine());
             a.add(new Contestant(name, dob, m1, m2, m3));
         }
-        Collections.sort(a, Contestant.BY_TOTAL_SCORE);
+        Collections.sort(a, Contestant.BY_TOTAL_SCORE_DESC_ID_ASC);
         for (Contestant x : a) {
             if (x.getTotalScore() == a.get(0).getTotalScore()) {
                 System.out.println(x);
