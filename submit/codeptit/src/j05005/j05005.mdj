@@ -220,13 +220,31 @@
 											"underline": true,
 											"text": "-count: int = 0",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAGQyM/pSMjdiwk=",
+											"_parent": {
+												"$ref": "AAAAAAGQyLDSnxFoVyQ="
+											},
+											"model": {
+												"$ref": "AAAAAAGQyM/pPcjayos="
+											},
+											"font": "Arial;13;0",
+											"left": 53,
+											"top": 288,
+											"width": 393.7421875,
+											"height": 13,
+											"underline": true,
+											"text": "+BY_GPA_DESC: Comparator<Student> {readOnly}",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 193,
 									"width": 403.7421875,
-									"height": 98
+									"height": 113
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -249,7 +267,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 53,
-											"top": 296,
+											"top": 311,
 											"width": 393.7421875,
 											"height": 13,
 											"text": "+Student()",
@@ -266,7 +284,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 53,
-											"top": 311,
+											"top": 326,
 											"width": 393.7421875,
 											"height": 13,
 											"text": "+Student(name: String, dob: String, className: String, gpa: double)",
@@ -283,7 +301,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 53,
-											"top": 326,
+											"top": 341,
 											"width": 393.7421875,
 											"height": 13,
 											"text": "-formatDob(dob: String): String",
@@ -300,7 +318,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 53,
-											"top": 341,
+											"top": 356,
 											"width": 393.7421875,
 											"height": 13,
 											"text": "+toString(): String",
@@ -317,7 +335,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 53,
-											"top": 356,
+											"top": 371,
 											"width": 393.7421875,
 											"height": 13,
 											"text": "-formatName(name: String): String",
@@ -326,7 +344,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 48,
-									"top": 291,
+									"top": 306,
 									"width": 403.7421875,
 									"height": 83
 								},
@@ -366,7 +384,7 @@
 							"left": 48,
 							"top": 168,
 							"width": 402.7421875,
-							"height": 206,
+							"height": 221,
 							"nameCompartment": {
 								"$ref": "AAAAAAGQyLDSnxFjGqM="
 							},
@@ -454,6 +472,17 @@
 							"isStatic": true,
 							"type": "",
 							"defaultValue": "0"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAGQyM/pPcjayos=",
+							"_parent": {
+								"$ref": "AAAAAAGQyLDSnRFgZJc="
+							},
+							"name": "BY_GPA_DESC",
+							"isStatic": true,
+							"type": "Comparator<Student>",
+							"isReadOnly": true
 						}
 					],
 					"operations": [
