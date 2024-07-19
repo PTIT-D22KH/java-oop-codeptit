@@ -51,5 +51,4 @@ public class Employee {
     public String toString() {
         return id + " " + name + " " + gender + " " + dob + " " + address + " " + taxId + " " + contractDate;
     }
-    
 }
