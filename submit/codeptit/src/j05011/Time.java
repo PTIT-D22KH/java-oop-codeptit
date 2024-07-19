@@ -7,7 +7,6 @@ public class Time {
         String a[] = s.split(":");
         this.hour = Integer.parseInt(a[0]);
         this.minutes = Integer.parseInt(a[1]);
-        System.out.println(hour + " " + minutes);
     }
     public Time() {
 
