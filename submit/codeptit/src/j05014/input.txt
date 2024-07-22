@@ -1,0 +1,13 @@
+3
+Le Van Binh
+A1
+7.0
+3.0
+Tran Van Toan
+B3
+4.0
+7.0
+Hoang Thi Tam
+C2
+7.0
+6.0
