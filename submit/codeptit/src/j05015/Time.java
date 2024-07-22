@@ -37,8 +37,8 @@ public class Time {
         res.minutes = y;
         return res;
     }
-    @Override
-    public String toString() {
-        return hour + ":" + minutes;
-    }
+    // @Override
+    // public String toString() {
+    //     return hour + ":" + minutes;
+    // }
 }
