@@ -26,7 +26,7 @@ public class Student {
     }
     @Override
     public String toString() {
-        return id + " " + name + " " + this.score.getAverage_score() + " " + result;
+        return id + " " + name + " " + this.score.getAverageScore() + " " + result;
     }
 
     
@@ -34,9 +34,9 @@ public class Student {
 class CompareByAvgScoreAndId implements Comparator<Student> {
     @Override
     public int compare(Student a, Student b) {
-        if (a.getScore().getAverage_score() < b.getScore().getAverage_score()) {
+        if (a.getScore().getAverageScore() < b.getScore().getAverageScore()) {
             return 1;
-        } else if (a.getScore().getAverage_score() > b.getScore().getAverage_score()) {
+        } else if (a.getScore().getAverageScore() > b.getScore().getAverageScore()) {
             return -1;
         }
         return a.getId().compareTo(b.getId());

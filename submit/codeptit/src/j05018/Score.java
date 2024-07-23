@@ -2,7 +2,7 @@ package j05018;
 
 public class Score {
     private double math, vietnamese, english, physics, chemistry, biology, history, geography, gdcd, cn;
-    private double average_score;
+    private double averageScore;
     
     public Score(double math, double vietnamese, double english, double physics, double chemistry, double biology,
             double history, double geography, double gdcd, double cn) {
@@ -16,7 +16,7 @@ public class Score {
         this.geography = geography;
         this.gdcd = gdcd;
         this.cn = cn;
-        this.average_score = calAvgScore();
+        this.averageScore = calAvgScore();
     }
     
     private double calAvgScore() {
@@ -26,20 +26,20 @@ public class Score {
     }
 
     public String scoreToResult() {
-        if (this.average_score < 5) {
+        if (this.averageScore < 5) {
             return "YEU";
-        } else if (this.average_score <= 6.9) {
+        } else if (this.averageScore <= 6.9) {
             return "TB";
-        } else if (this.average_score <= 7.9) {
+        } else if (this.averageScore <= 7.9) {
             return "KHA";
-        } else if (this.average_score <= 8.9) {
+        } else if (this.averageScore <= 8.9) {
             return "GIOI";
         } 
         return "XUAT SAC";
     }
     
-    public double getAverage_score() {
-        return average_score;
+    public double getAverageScore() {
+        return averageScore;
     }
 
     // @Override
@@ -55,7 +55,7 @@ public class Score {
     //             ", geography=" + geography +
     //             ", gdcd=" + gdcd +
     //             ", cn=" + cn +
-    //             ", average_score=" + String.format("%.1f", average_score) +
+    //             ", averageScore=" + String.format("%.1f", averageScore) +
     //             ", result='" + scoreToResult() + '\'' +
     //             '}';
     // }
