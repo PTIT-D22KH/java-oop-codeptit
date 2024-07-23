@@ -5,7 +5,7 @@ public class HotelInfo {
     private int floor;
     private MyDate checkInDate, checkOutDate;
     private long numDays;
-    private long additionalCost, totalCost, basicCost;
+    private long additionalCost, totalCost;
     
 
     public HotelInfo(String roomId, String checkInString, String checkOutString, long additionalCost) {
