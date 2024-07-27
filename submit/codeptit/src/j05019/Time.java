@@ -15,7 +15,7 @@ public class Time {
     }
 
     
-    public int timeToTotalMinutes() {
+    private int timeToTotalMinutes() {
         return hour * 60 + minutes;
     }
     public static double minutesToHourDecimal(int totalMinutes){
