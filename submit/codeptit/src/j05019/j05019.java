@@ -20,6 +20,7 @@ public class j05019 {
                     notFound = false;
                     station.addTime(startTime, endTime);
                     station.updateRainVolume(newRainVolume);
+                    break;
                     // System.out.println(station);
                 } 
             }

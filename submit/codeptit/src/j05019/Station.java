@@ -10,11 +10,12 @@ public class Station {
     public Station(String name, String startTime, String endTime, double rainVolume) {
         this.name = name;
         count++;
-        String s = String.valueOf(count);
-        if (s.length() == 1) {
-            s = "0" + s;
-        }
-        this.id = "T" + s;
+        // String s = String.valueOf(count);
+        // if (s.length() == 1) {
+        //     s = "0" + s;
+        // }
+        // this.id = "T" + s;
+        this.id = String.format("T%02d", count);
         this.totalMinutes = calTotalMinutes(startTime, endTime);
         this.rainVolume = rainVolume;
     } 
