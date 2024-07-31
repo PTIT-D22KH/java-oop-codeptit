@@ -339,7 +339,7 @@
 											"top": 419,
 											"width": 458.462890625,
 											"height": 13,
-											"text": "-calTotalPrice(sellPrice: double): double",
+											"text": "-calTotalPrice(sellPrice: double, quantity: double): double",
 											"horizontalAlignment": 0
 										},
 										{
@@ -687,6 +687,15 @@
 									},
 									"type": "double",
 									"direction": "return"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGRCDIh8Fs1uEU=",
+									"_parent": {
+										"$ref": "AAAAAAGRB9r7DVsKlkI="
+									},
+									"name": "quantity",
+									"type": "double"
 								}
 							]
 						},
