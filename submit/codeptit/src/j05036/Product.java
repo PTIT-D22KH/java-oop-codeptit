@@ -13,10 +13,18 @@ public class Product {
         this.quantity = quantity;
         count++;
         this.id = String.format("MH%02d", count);
-
+        this.shippingFee = calShippingFee(buyPrice, quantity);
+        this.sellPrice = calSellPrice(buyPrice, quantity, shippingFee);
+        this.totalPrice = calTotalPrice(sellPrice);
     }
     private double calShippingFee(double buyPrice, double quantity) {
-        return roundDouble(buyPrice * quantity * 0.05);
+        return roundDouble(buyPrice * quantity * 5/100);
+    }
+    private double calSellPrice(double buyPrice, double quantity, double shippingFee) {
+        return roundDouble(buyPrice * quantity + shippingFee);
+    }
+    private double calTotalPrice(double sellPrice) {
+        return sellPrice * 102/100;
     }
 
     private double roundDouble(double n) {
@@ -26,6 +34,9 @@ public class Product {
         }
         return x;
     }
-    
+    @Override
+    public String toString(){ 
+        return id + " " + name + " " + unit + " " + String.format("%.0f", shippingFee) + " " + String.format("%.0f", sellPrice) + " " + String.format("%.0f", totalPrice);
+    }
 
 }
