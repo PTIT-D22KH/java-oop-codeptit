@@ -10,6 +10,8 @@ public class Athlete {
         this.dob = dob;
         Time start = new Time(startTime);
         Time end = new Time(endTime);
+        this.runTime = start.timeDiff(end);
+        this.age = 2024 - Integer.parseInt(dob.substring(6));
         
     }
 

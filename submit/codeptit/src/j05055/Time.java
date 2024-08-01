@@ -10,9 +10,26 @@ public class Time {
         this.minutes = Integer.parseInt(a[1]);
         this.seconds = Integer.parseInt(a[2]);
     }
+    public Time() {
 
+    }
     public Time timeDiff(Time o) {
-        return new Time("");
+        int x = o.hour - this.hour;
+        int y = o.minutes - this.minutes;
+        int z = o.seconds - this.seconds;
+        if (z < 0) {
+            y--;
+            z += 60;
+        }
+        if (y < 0) {
+            x--;
+            y += 60;
+        }
+        Time res = new Time();
+        res.hour = x;
+        res.minutes = y;
+        res.seconds = z;
+        return res;
     }
     @Override
     public String toString() {
