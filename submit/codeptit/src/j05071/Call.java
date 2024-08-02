@@ -13,10 +13,11 @@ public class Call {
         this.phone = phone;
         this.start = new Time(start);
         this.end = new Time(end);
-        // this.city = city;
+        this.city = null;
         this.time = this.end.timeToMinutes() - this.start.timeToMinutes();
         if (phone.contains("-")) {
             this.city = cityMap.get(Integer.valueOf(phone.substring(1, 3)));
+            this.price = city.getPrice() * time;
         } else {
             if (this.time % 3 == 0) {
                 this.time /= 3;
@@ -25,6 +26,17 @@ public class Call {
             }
             this.price = 800 * this.time;
         }
+        
+    }
+    public static Map<Integer, City> getCityMap() {
+        return cityMap;
+    }
+    @Override
+    public String toString() {
+        if (city == null) {
+            return phone + " " + "Noi mang" + " " + time + " " + price;
+        } 
+        return phone + " " + city.getName() + " " + time + " " + price;
     }
 
     
