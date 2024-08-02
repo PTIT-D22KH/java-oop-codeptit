@@ -1,4 +1,4 @@
-package j06007;
+package j06008;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +12,14 @@ public class Course {
         this.name = name;
         courseMap.put(id, this);
     }
-    
+    public static Map<String, Course> getCourseMap() {
+        return courseMap;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public double getNumHours() {
+        return numHours;
+    }
     
 }
