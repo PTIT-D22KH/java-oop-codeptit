@@ -15,10 +15,10 @@ public class j05055 {
             a.add(new Athlete(input.nextLine(), input.nextLine(), input.nextLine(), input.nextLine()));
         }
         Collections.sort(a, new CompareByFinalTime());
-        int rank = 1;
+        int rank = 0;
         for (int i = 0; i < n; i++) {
             if (i == 0 || !a.get(i).getFinalTime().toString().equals(a.get(i - 1).getFinalTime().toString())) {
-                rank = i + 1;
+                rank = rank + 1;
             }
             // System.out.println(a.get(i));
             // System.out.println(rank);
