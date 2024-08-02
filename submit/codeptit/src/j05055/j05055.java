@@ -17,11 +17,11 @@ public class j05055 {
         Collections.sort(a, new CompareByFinalTime());
         int rank = 1;
         for (int i = 0; i < n; i++) {
-            if (i == 0 || !a.get(i).getFinalTime().equals(a.get(i - 1).getFinalTime())) {
+            if (i == 0 || !a.get(i).getFinalTime().toString().equals(a.get(i - 1).getFinalTime().toString())) {
                 rank = i + 1;
             }
-            System.out.println(a.get(i));
-            System.out.println(rank);
+            // System.out.println(a.get(i));
+            // System.out.println(rank);
             a.get(i).setRank(rank);
         }
         Collections.sort(a, new CompareById());

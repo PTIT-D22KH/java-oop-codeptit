@@ -1,4 +1,4 @@
-3
+4
 Nguyen Van Thanh
 20/03/1990
 07:00:00
@@ -8,6 +8,10 @@ Nguyen Hoa Binh
 07:02:00
 07:11:20
 Le Thanh Van
+15/03/1998
+07:05:00
+07:15:30
+Vu Cong Tuan Duong
 15/03/1998
 07:05:00
 07:15:30

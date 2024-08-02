@@ -29,8 +29,13 @@ public class Time {
         int x = o.hour - this.hour;
         int y = o.minutes - this.minutes;
         int z = o.seconds - this.seconds;
+        // System.out.println(x + " " + y + " " + z);
         if (x < 0) {
             x = -1 * x;
+            y = this.minutes - o.minutes;
+            z = this.seconds - o.seconds;
+        }
+        if (x >= 0 && y < 0) {
             y = this.minutes - o.minutes;
             z = this.seconds - o.seconds;
         }
