@@ -1,11 +1,14 @@
 package j06007;
 
+// import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Lecturer {
     private String id, name;
-    // private Course course;
+    private Set<String> courses = new HashSet<>();
     private double numHours;
     private static Map<String, Lecturer> lecturerMap = new HashMap<>();
     public Lecturer(String id, String name) {
@@ -18,9 +21,9 @@ public class Lecturer {
     public static Map<String, Lecturer> getLecturerMap() {
         return lecturerMap;
     }
-    // public void setCourse(Course course) {
-    //     this.course = course;
-    // }
+    public void setCourses(String course) {
+        this.courses.add(course);
+    }
     public void setNumHours(double numHours) {
         this.numHours += numHours;
     }

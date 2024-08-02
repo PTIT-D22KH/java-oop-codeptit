@@ -39,6 +39,7 @@ public class j06007 {
         while (n-- > 0) {
             String s = input.nextLine();
             String x[] = s.split(" ");
+            Lecturer.getLecturerMap().get(x[0]).setCourses(x[1]);
             Lecturer.getLecturerMap().get(x[0]).setNumHours(Double.parseDouble(x[2]));
         }
         for (Lecturer x : lecturers) {
