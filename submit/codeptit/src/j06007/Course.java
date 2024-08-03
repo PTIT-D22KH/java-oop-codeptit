@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Course {
-    private String id, name, numHoursInString;
+    private String id, name;
     private double numHours;
     private static Map<String, Course> courseMap = new HashMap<>();
     public Course(String id, String name) {
@@ -23,9 +23,9 @@ public class Course {
     public void setNumHours(double numHours) {
         this.numHours = numHours;
     }
-    public void setNumHoursInString(String numHoursInString) {
-        this.numHoursInString = numHoursInString;
-    }
+    // public void setNumHoursInString(String numHoursInString) {
+    //     this.numHoursInString = numHoursInString;
+    // }
     public double getNumHours() {
         return numHours;
     }

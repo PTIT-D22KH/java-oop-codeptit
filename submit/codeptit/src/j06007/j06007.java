@@ -41,7 +41,7 @@ public class j06007 {
             String x[] = s.split(" ");
             Course c = new Course(x[0], Course.getCourseMap().get(x[1]).getName());
             Double numHours = Double.parseDouble(x[2]);
-            c.setNumHoursInString(x[2]);
+            // c.setNumHoursInString(x[2]);
             c.setNumHours(numHours);
             Lecturer.getLecturerMap().get(x[0]).setCourses(c);
             Lecturer.getLecturerMap().get(x[0]).setNumHours(numHours);
