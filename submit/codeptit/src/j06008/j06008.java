@@ -39,11 +39,19 @@ public class j06008 {
         while (n-- > 0) {
             String s = input.nextLine();
             String x[] = s.split(" ");
-            Course.getCourseMap().se
-            Lecturer.getLecturerMap().get(x[0]).setCourses(x[1]);
-            Lecturer.getLecturerMap().get(x[0]).setNumHours(Double.parseDouble(x[2]));
+            Course c = new Course(x[0], Course.getCourseMap().get(x[1]).getName());
+            Double numHours = Double.parseDouble(x[2]);
+            c.setNumHoursInString(x[2]);
+            c.setNumHours(numHours);
+            Lecturer.getLecturerMap().get(x[0]).setCourses(c);
+            Lecturer.getLecturerMap().get(x[0]).setNumHours(numHours);
         }
         String inputLecturer = input.nextLine();
+        for (Lecturer x : lecturers) {
+            if (x.getId().equals(inputLecturer)) {
+                System.out.println(x);
+            }
+        }
         input.close();
     }
 }
