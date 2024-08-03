@@ -1,4 +1,4 @@
-package j05055;
+package j05056;
 
 import java.util.Comparator;
 
@@ -47,7 +47,9 @@ public class Athlete {
     private Time calFinalTime() {
         return this.runTime.timeDiff(priorityTime);
     }
-
+    public int getRank() {
+        return rank;
+    }
     @Override
     public String toString() {
         return id + " " + name + " " + runTime + " " + priorityTime + " " + finalTime + " " + rank;
@@ -75,9 +77,12 @@ class CompareByFinalTime implements Comparator<Athlete> {
     }
 }
 
-class CompareById implements Comparator<Athlete> {
+class CompareByRank implements Comparator<Athlete> {
     @Override
     public int compare(Athlete a, Athlete b) {
-        return a.getId().compareTo(b.getId());
+        if (a.getRank() > b.getRank()) {
+            return 1;
+        } 
+        return -1;
     }
 }

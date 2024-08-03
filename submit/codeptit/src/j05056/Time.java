@@ -1,4 +1,4 @@
-package j05055;
+package j05056;
 
 public class Time {
     private int hour, minutes, seconds;
