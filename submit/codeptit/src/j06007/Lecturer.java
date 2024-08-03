@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class Lecturer {
     private String id, name;
-    private Set<String> courses = new HashSet<>();
+    private Set<Course> courses = new HashSet<>();
     private double numHours;
     private static Map<String, Lecturer> lecturerMap = new HashMap<>();
     public Lecturer(String id, String name) {
@@ -21,11 +21,17 @@ public class Lecturer {
     public static Map<String, Lecturer> getLecturerMap() {
         return lecturerMap;
     }
-    public void setCourses(String course) {
+    // public Set<String> getCourses() {
+    //     return courses;
+    // }
+    public void setCourses(Course course) {
         this.courses.add(course);
     }
     public void setNumHours(double numHours) {
         this.numHours += numHours;
+    }
+    public String getId() {
+        return id;
     }
     @Override
     public String toString(){
