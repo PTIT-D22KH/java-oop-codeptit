@@ -30,9 +30,10 @@ public class Bill {
 class CompareByTotalProfit implements Comparator<Bill> {
     @Override
     public int compare(Bill a, Bill b) {
-        if (a.getTotalProfit() < b.getTotalProfit()) {
-            return 1;
-        }
-        return -1;
+        // if (a.getTotalProfit() < b.getTotalProfit()) {
+        //     return 1;
+        // }
+        // return -1;
+        return Long.compare(b.getTotalProfit(), a.getTotalProfit());
     }
 }
