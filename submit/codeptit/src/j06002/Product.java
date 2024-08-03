@@ -33,10 +33,6 @@ public class Product {
     public void setType(int type) {
         this.type = type;
     }
-    @Override
-    public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price1=" + price1 + ", price2=" + price2 + ", type=" + type
-                + "]";
-    }
+
     
 }
