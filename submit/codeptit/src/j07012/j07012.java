@@ -36,4 +36,6 @@ public class j07012 {
         for (Word s : words) {
             System.out.println(s);
         }
+        input.close();
+    }
 }
