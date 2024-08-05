@@ -11,7 +11,7 @@ public class j07054 {
     public static void main(String[] args) throws IOException{
         // Write your code here
         // Scanner input = new Scanner(new File("j07054/BANGDIEM.in"));
-        Scanner input = new Scanner(new File("jBANGDIEM.in"));
+        Scanner input = new Scanner(new File("BANGDIEM.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Student> students = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
