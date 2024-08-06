@@ -11,6 +11,7 @@ public class j08022 {
         int t = input.nextInt();
         while (t-- > 0) {
             testCase();
+            System.out.println();
         }
         
     }
@@ -20,9 +21,23 @@ public class j08022 {
         for (int i = 0; i < n; i++) {
             a.add(input.nextLong());
         }
-        
-        Stack<Integer> st = new Stack<>();
 
+        Stack<Long> st = new Stack<>();
+        long res[] = new long[n];
+        for (int i = n - 1; i >= 0; i--) {
+            while(!st.empty() && a.get(i) >= st.peek()) {
+                st.pop();
+            }
+            if (st.empty()) {
+                res[i] = -1;
+            } else {
+                res[i] = st.peek();
+            }
+            st.push(a.get(i));
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.printf("%d ", res[i]);
+        }
 
     }
     
