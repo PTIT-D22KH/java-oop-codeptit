@@ -15,8 +15,16 @@ def copy_and_zip_packages(src_dir, dest_dir):
         # If the directory contains more than one Java file
         if len(java_files) > 1:
             # Get the relative path of the package
-            relative_path = os.path.relpath(root, src_dir)
             package_name = os.path.basename(root)
+            zip_filename = f"{package_name}.zip"
+            zip_filepath = os.path.join(dest_dir, zip_filename)
+
+            # Check if the zip file already exists
+            if os.path.exists(zip_filepath):
+                print(f"Skipping {package_name} as it is already zipped.")
+                continue
+
+            # Create the package path in the destination
             package_path = os.path.join(dest_dir, package_name)
 
             if not os.path.exists(package_path):
@@ -27,9 +35,6 @@ def copy_and_zip_packages(src_dir, dest_dir):
                 shutil.copy(os.path.join(root, file), package_path)
 
             # Create a zip file for the package
-            zip_filename = f"{package_name}.zip"
-            zip_filepath = os.path.join(dest_dir, zip_filename)
-
             with zipfile.ZipFile(zip_filepath, 'w') as zipf:
                 # Add the files to the zip file under the package folder name
                 for file in java_files:
@@ -48,4 +53,4 @@ if __name__ == "__main__":
     # Copy Java files and zip the packages that contain more than 1 Java class file
     copy_and_zip_packages(src_directory, dest_directory)
 
-    print(f"Zipped relevant packages to {dest_directory}")
+    print(f"Zipped new packages to {dest_directory}")
