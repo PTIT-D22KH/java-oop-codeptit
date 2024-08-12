@@ -1,6 +1,6 @@
 ## j01014
 ![alt text](image.png)
-
+![alt text](image.png)
 - [input.txt](input.txt)
 - [j01014.class](j01014.class)
 - [j01014.java](j01014.java)
