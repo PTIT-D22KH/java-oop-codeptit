@@ -1,5 +1,5 @@
 package hellojar;
-
+import java.util.*;
 import view.*;
 import vn.edu.ptit.*;
 class PaymentController {
@@ -36,6 +36,18 @@ class PaymentController {
 
 public class hellojar {
     public static void main(String[] args) {
+        PaymentController pc = new PaymentController();
+        //Output for test
+        Invoice invoice = pc.getInvoice();
+        InvoiceView.show(invoice);
+    }
+    public static void main2429466(String[] args) {
+        PaymentController pc = new PaymentController();
+        //Output for test
+        Invoice invoice = pc.getInvoice();
+        InvoiceView.show(invoice);
+    }
+    public static void main8347509(String[] args) {
         // Write your code here
         PaymentController pc = new PaymentController();
         //Output for test
