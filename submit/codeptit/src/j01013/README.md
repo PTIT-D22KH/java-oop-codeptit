@@ -1,4 +1,4 @@
-## ./j01013
+## j01013
 ![alt text](image.png)
 
 - [image.png](image.png)
