@@ -1,4 +1,4 @@
-## j01001
+## ./j01001
 ![alt text](image.png)
 
 - [j01001.java](j01001.java)
