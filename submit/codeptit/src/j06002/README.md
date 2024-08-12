@@ -1,8 +1,15 @@
 ## ./j06002
 ![alt text](image.png)
 
+- [Bill.class](Bill.class)
 - [Bill.java](Bill.java)
-- [j06002.java](j06002.java)
-- [Product.java](Product.java)
+- [CompareByFinalPrice.class](CompareByFinalPrice.class)
 - [input.txt](input.txt)
+- [j06002.class](j06002.class)
+- [j06002.java](j06002.java)
+- [j06002.mdj](j06002.mdj)
+- [Main.jpg](Main.jpg)
 - [output.txt](output.txt)
+- [Product.class](Product.class)
+- [Product.java](Product.java)
+- [README.md](README.md)
