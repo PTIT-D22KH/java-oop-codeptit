@@ -1,6 +1,9 @@
-## ./j06003
+## j06003
 ![alt text](image.png)
 
+- [image-1.png](image-1.png)
+- [image-2.png](image-2.png)
+- [image.png](image.png)
 - [input.txt](input.txt)
 - [j06003.class](j06003.class)
 - [j06003.java](j06003.java)

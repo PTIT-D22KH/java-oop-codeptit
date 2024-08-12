@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class j01013 {
     public static Scanner input = new Scanner(System.in);
-    public static int res = 0;
+    public static long res = 0;
     public static void main(String[] args) {
         // Write your code here
         int t= input.nextInt();
@@ -16,15 +16,17 @@ public class j01013 {
     }
     public static void testCase() {
         int n = input.nextInt();
-        for (int i = 2; i * i <= n; i++) {
-            if (n % i == 0) {
-                while (n % i == 0) {
-                    n /= i;
-                    res += i;
-                }
+        while (n % 2 == 0) {
+            res += 2;
+            n /= 2;
+        }
+        for (int i = 3; i * i <= n; i += 2) {
+            while (n % i == 0) {
+                n /= i;
+                res += i;
             }
         }
-        if (n > 1) {
+        if (n > 2) {
             res += n;
         }
         
