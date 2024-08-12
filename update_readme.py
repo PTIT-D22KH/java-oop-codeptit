@@ -7,6 +7,10 @@ def generate_directory_structure(base_dir):
         # Ignore the .git directory
         dirs[:] = [d for d in dirs if d != '.git']
         
+        # Sort directories and files
+        dirs.sort()
+        files.sort()
+        
         level = root.replace(base_dir, '').count(os.sep)
         indent = ' ' * 4 * level
         structure += f"{indent}- {os.path.basename(root)}/\n"
