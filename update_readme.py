@@ -7,15 +7,23 @@ def generate_directory_structure(base_dir):
         # Ignore the .git directory
         dirs[:] = [d for d in dirs if d != '.git']
         
+        # Sort directories and files
+        dirs.sort()
+        files.sort()
+        
         level = root.replace(base_dir, '').count(os.sep)
         indent = ' ' * 4 * level
-        structure += f"{indent}- {os.path.basename(root)}/\n"
+        relative_root = os.path.relpath(root, base_dir).replace("\\", "/")
+        if level == 0:
+            structure += f"- [{os.path.basename(root)}/]({relative_root})\n"
+        else:
+            structure += f"{indent}- [{os.path.basename(root)}/]({relative_root})\n"
         
         sub_indent = ' ' * 4 * (level + 1)
         for file in files:
             if file != 'README.md':  # Avoid linking to the README.md itself
-                file_path = os.path.join(root, file)
-                relative_path = os.path.relpath(file_path, base_dir)
+                file_path = os.path.join(root, file).replace("\\", "/")
+                relative_path = os.path.relpath(file_path, base_dir).replace("\\", "/")
                 structure += f"{sub_indent}- [{file}]({relative_path})\n"
     
     return structure
