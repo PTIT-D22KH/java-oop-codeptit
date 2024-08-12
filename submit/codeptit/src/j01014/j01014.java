@@ -1,45 +1,33 @@
 package j01014;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 public class j01014 {
-    public static Scanner input= new Scanner(System.in);
-    public static long MAX = 1e10 + 1;
-    public static ArrayList<Long> prime = new ArrayList<>();
     public static void main(String[] args) {
-        // Write your code here
+        Scanner input= new Scanner(System.in);
         int t = input.nextInt();
+        long n;
         while (t-- > 0) {
-            testCase();
+            n  = input.nextLong();
+            System.out.println(maxPrime(n));
         }
+        input.close();
     }
-    public static void sieve() {
-        for (int i = 0; i < prime.size(); i++) {
-            prime.set(i, 0);
+    public static long maxPrime(long n) {
+        long res = -1;
+        while (n % 2 == 0) {
+            res = 2;
+            n /= 2;
         }
-        for (int i = 2; i * i < MAX; i++) {
-            if (prime.get(i) == 0) {
-                for (int j = i; j < MAX; j += i) {
-                        prime.set(j, i);
-                }
+        for (int i = 3; i <= Math.sqrt(n); i += 2){
+                
+            while (n % i == 0) {
+                n /= i;
+                res = i;
             }
         }
-    }
-    public static void testCase() {
-        long n  = input.nextLong();
-        // int res = 0;
-        // for (int i = 2; i * i <= n; i++ ){
-        //     if (n % i == 0) {
-        //         res = i;
-        //         while (n % i == 0) {
-        //             n /= i;
-        //         }
-        //     }
-        // }
-        // if (n > 1) {
-        //     res = (int)n;
-        // }
-        // System.out.println(res);
-        System.out.println(prime.get(n));
+        if (n > 2) {
+            res = n;
+        }
+        return res;
     }
 }
