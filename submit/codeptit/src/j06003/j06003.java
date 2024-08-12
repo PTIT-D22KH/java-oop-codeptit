@@ -31,6 +31,7 @@ public class j06003 {
                 }
             }
             System.out.printf("Bai tap dang ky: %s", ManagedApp.getAssignmentName().get(s));
+            System.out.println();
         }
 
         input.close();
