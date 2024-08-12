@@ -7,10 +7,17 @@ public class j01001 {
     }
     public static void testCase() {
         Scanner input = new Scanner(System.in);
-        int a = input.nextInt();
-        int b = input.nextInt();
-        Rectangle r = new Rectangle(a, b);
-        System.out.printf("%d %d", r.getParameter(), r.getArea());
+        long a = input.nextLong();
+        long b = input.nextLong();
+        if (a <= 0 || b <= 0) {
+            System.out.println("0");
+            return;
+        } else {
+            Rectangle r = new Rectangle(a, b);
+            System.out.println(r.getParameter() + " " +  r.getArea());
+        }
+        
+        
         input.close();
     }
 }

@@ -1,1 +1,17 @@
-## j06006
+## ./j06006
+![alt text](image.png)
+
+- [Bill.class](Bill.class)
+- [Bill.java](Bill.java)
+- [CompareByTotalProfit.class](CompareByTotalProfit.class)
+- [Customer.class](Customer.class)
+- [Customer.java](Customer.java)
+- [input.txt](input.txt)
+- [j06006.class](j06006.class)
+- [j06006.java](j06006.java)
+- [j06006.mdj](j06006.mdj)
+- [Main.jpg](Main.jpg)
+- [output.txt](output.txt)
+- [Product.class](Product.class)
+- [Product.java](Product.java)
+- [README.md](README.md)

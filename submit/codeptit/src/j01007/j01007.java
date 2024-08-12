@@ -13,7 +13,7 @@ public class j01007 {
 
     }
     public static void testCase() {
-        long n = input.nextInt();
+        long n = input.nextLong();
         FibonacciNumber f = new FibonacciNumber();
         if (f.isFiboNumber(n)) {
             System.out.println("YES");

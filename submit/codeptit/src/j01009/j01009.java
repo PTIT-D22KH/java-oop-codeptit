@@ -3,19 +3,22 @@ package j01009;
 import java.util.Scanner;
 
 public class j01009 {
-    public static Scanner input = new Scanner(System.in);
+    // public static 
     public static void main(String[] args) {
         // Write your code here
+        Scanner input = new Scanner(System.in);
+        long a[] = new long[21];
+        a[1] = 1;
+        a[0] = 0;
+        for (int i = 2; i <= 20; i++) {
+            a[i] = a[i - 1] * i;
+        }
         int n = input.nextInt();
-        int sum = 0;
+        long sum = 0;
         for (int i = 1; i <= n; i++) {
-            int tmp = 1;
-            for (int j = 1; j <= i; j++) {
-                tmp *= j;
-            }
-            sum += tmp;
+            sum += a[i];
         }
         System.out.println(sum);
-
-    }
+        input.close();
+    }   
 }

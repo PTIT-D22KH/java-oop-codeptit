@@ -1,1 +1,13 @@
-## j05030
+## ./j05030
+![alt text](image.png)
+
+- [CompareById.class](CompareById.class)
+- [input.txt](input.txt)
+- [j05030.class](j05030.class)
+- [j05030.java](j05030.java)
+- [j05030.mdj](j05030.mdj)
+- [Main.jpg](Main.jpg)
+- [output.txt](output.txt)
+- [README.md](README.md)
+- [Student.class](Student.class)
+- [Student.java](Student.java)

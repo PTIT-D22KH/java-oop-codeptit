@@ -1,1 +1,16 @@
-## j07027
+## ./j07027
+![alt text](image.png)
+
+- [BAITAP.in](BAITAP.in)
+- [CompareById.class](CompareById.class)
+- [input.txt](input.txt)
+- [j07027.class](j07027.class)
+- [j07027.java](j07027.java)
+- [ManagedApp.class](ManagedApp.class)
+- [ManagedApp.java](ManagedApp.java)
+- [NHOM.in](NHOM.in)
+- [output.txt](output.txt)
+- [README.md](README.md)
+- [SINHVIEN.in](SINHVIEN.in)
+- [Student.class](Student.class)
+- [Student.java](Student.java)

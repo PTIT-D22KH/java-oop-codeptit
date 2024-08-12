@@ -1,1 +1,12 @@
-## j05003
+## ./j05003
+![alt text](image.png)
+
+- [input.txt](input.txt)
+- [j05003.class](j05003.class)
+- [j05003.java](j05003.java)
+- [j05003.mdj](j05003.mdj)
+- [Main.jpg](Main.jpg)
+- [output.txt](output.txt)
+- [README.md](README.md)
+- [Student.class](Student.class)
+- [Student.java](Student.java)

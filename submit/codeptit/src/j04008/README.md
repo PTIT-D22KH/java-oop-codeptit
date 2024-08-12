@@ -1,1 +1,16 @@
-## j04008
+## ./j04008
+![alt text](image.png)
+
+- [Edge.class](Edge.class)
+- [Edge.java](Edge.java)
+- [input.txt](input.txt)
+- [j04008.class](j04008.class)
+- [j04008.java](j04008.java)
+- [j04008.mdj](j04008.mdj)
+- [Main.jpg](Main.jpg)
+- [output.txt](output.txt)
+- [Point.class](Point.class)
+- [Point.java](Point.java)
+- [README.md](README.md)
+- [Triangle.class](Triangle.class)
+- [Triangle.java](Triangle.java)

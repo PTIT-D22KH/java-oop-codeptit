@@ -7,7 +7,7 @@ public class j01002 {
         int t = input.nextInt();
         while (t-- > 0) {
             Test test = new Test();
-            System.out.println(test.testCase());
+            System.out.println(test.testCase(input));
         }
     }
 }

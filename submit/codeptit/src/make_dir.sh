@@ -25,6 +25,9 @@ if [ -d "$1" ]; then
     echo "    }" >> $filename
     echo "}" >> $filename
 
+    # Add hyperlink to the new file in README.md
+    echo "- [$filename]($filename)" >> README.md
+
     code $filename
 else
     mkdir -p $1
@@ -32,6 +35,11 @@ else
     touch $1.java input.txt output.txt
 
     echo "## $1" >> README.md
+    # Add hyperlinks to the files in README.md
+    echo "- [$1.java]($1.java)" >> README.md
+    echo "- [input.txt](input.txt)" >> README.md
+    echo "- [output.txt](output.txt)" >> README.md
+
     # Use the directory name as the package name
     echo "package $1;" >> $1.java
     echo "" >> $1.java
