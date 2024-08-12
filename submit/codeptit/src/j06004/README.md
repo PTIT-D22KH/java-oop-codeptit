@@ -1,8 +1,15 @@
 ## ./j06004
 ![alt text](image.png)
 
-- [j06004.java](j06004.java)
-- [ManagedApp.java](ManagedApp.java)
-- [Student.java](Student.java)
+- [CompareById.class](CompareById.class)
 - [input.txt](input.txt)
+- [j06004.class](j06004.class)
+- [j06004.java](j06004.java)
+- [j06004.mdj](j06004.mdj)
+- [Main.jpg](Main.jpg)
+- [ManagedApp.class](ManagedApp.class)
+- [ManagedApp.java](ManagedApp.java)
 - [output.txt](output.txt)
+- [README.md](README.md)
+- [Student.class](Student.class)
+- [Student.java](Student.java)

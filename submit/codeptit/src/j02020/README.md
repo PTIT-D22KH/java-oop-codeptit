@@ -1,6 +1,8 @@
 ## ./j02020
 ![alt text](image.png)
 
-- [j02020.java](j02020.java)
 - [input.txt](input.txt)
+- [j02020.class](j02020.class)
+- [j02020.java](j02020.java)
 - [output.txt](output.txt)
+- [README.md](README.md)

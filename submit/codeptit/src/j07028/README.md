@@ -1,8 +1,15 @@
 ## ./j07028
 ![alt text](image.png)
 
+- [Course.class](Course.class)
 - [Course.java](Course.java)
-- [j07028.java](j07028.java)
-- [Lecturer.java](Lecturer.java)
+- [GIANGVIEN.in](GIANGVIEN.in)
+- [GIOCHUAN.in](GIOCHUAN.in)
 - [input.txt](input.txt)
+- [j07028.class](j07028.class)
+- [j07028.java](j07028.java)
+- [Lecturer.class](Lecturer.class)
+- [Lecturer.java](Lecturer.java)
+- [MONHOC.in](MONHOC.in)
 - [output.txt](output.txt)
+- [README.md](README.md)

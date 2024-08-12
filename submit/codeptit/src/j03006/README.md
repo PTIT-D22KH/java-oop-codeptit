@@ -1,6 +1,8 @@
 ## ./j03006
 ![alt text](image.png)
 
-- [j03006.java](j03006.java)
 - [input.txt](input.txt)
+- [j03006.class](j03006.class)
+- [j03006.java](j03006.java)
 - [output.txt](output.txt)
+- [README.md](README.md)

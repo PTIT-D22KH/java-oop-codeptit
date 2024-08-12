@@ -1,7 +1,13 @@
 ## ./j05034
 ![alt text](image.png)
 
-- [j05034.java](j05034.java)
-- [Student.java](Student.java)
+- [CompareByName.class](CompareByName.class)
 - [input.txt](input.txt)
+- [j05034.class](j05034.class)
+- [j05034.java](j05034.java)
+- [j05034.mdj](j05034.mdj)
+- [Main.jpg](Main.jpg)
 - [output.txt](output.txt)
+- [README.md](README.md)
+- [Student.class](Student.class)
+- [Student.java](Student.java)

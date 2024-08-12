@@ -1,8 +1,16 @@
 ## ./j05055
 ![alt text](image.png)
 
+- [Athlete.class](Athlete.class)
 - [Athlete.java](Athlete.java)
-- [j05055.java](j05055.java)
-- [Time.java](Time.java)
+- [CompareByFinalTime.class](CompareByFinalTime.class)
+- [CompareById.class](CompareById.class)
 - [input.txt](input.txt)
+- [j05055.class](j05055.class)
+- [j05055.java](j05055.java)
+- [j05055.mdj](j05055.mdj)
+- [Main.jpg](Main.jpg)
 - [output.txt](output.txt)
+- [README.md](README.md)
+- [Time.class](Time.class)
+- [Time.java](Time.java)
