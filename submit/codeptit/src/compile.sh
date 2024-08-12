@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to update README.md with .java, .txt, and .png files in the directory
+# Function to update README.md with all files in the directory
 update_readme() {
     local dir=$1
     local readme_file="$dir/README.md"
@@ -10,8 +10,8 @@ update_readme() {
     echo "![alt text](image.png)" >> "$readme_file"
     echo "" >> "$readme_file"
     
-    # Add hyperlinks to .java, .txt, and .png files in the directory
-    for file in "$dir"/*.{java,txt,png}; do
+    # Add hyperlinks to all files in the directory
+    for file in "$dir"/*; do
         if [ -f "$file" ]; then
             filename=$(basename -- "$file")
             echo "- [$filename]($filename)" >> "$readme_file"
