@@ -1,35 +1,31 @@
 package j01001;
 
 public class Rectangle {
-    private int height;
-    private int width;
-    private int parameter;
-    private int area;
-    public Rectangle(int height, int width) {
+    private long height;
+    private long width;
+    private long parameter;
+    private long area;
+    public Rectangle(long height, long width) {
         this.height = height;
         this.width = width;
-        if (height <= 0 || width <= 0) {
-            parameter = 0;
-            area = 0;
-        } else {
-            parameter = (height + width) * 2;
-            area = height * width;
-        }
+        parameter = (height + width) * 2;
+        area = height * width;
+
     }
 
-    public int getParameter() {
+    public long getParameter() {
         return parameter;
     }
-    public int getArea() {
+    public long getArea() {
         return area;
     }
 
-    public int getHeight() {
-        return height;
-    }
+    // public int getHeight() {
+    //     return height;
+    // }
 
-    public int getWidth() {
-        return width;
-    }
+    // public int getWidth() {
+    //     return width;
+    // }
     
 }
