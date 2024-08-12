@@ -5,11 +5,28 @@ update_readme() {
     local dir=$1
     local readme_file="$dir/README.md"
 
+    # Temporarily store lines that contain image links and headers
+    local temp_file=$(mktemp)
+
+    # Preserve the section header and image links
+    if [ -f "$readme_file" ]; then
+        grep -E '^\#|!\[alt text\]' "$readme_file" > "$temp_file"
+    fi
+
     # Clear the existing content in README.md
-    echo "## $dir" > "$readme_file"
-    echo "![alt text](image.png)" >> "$readme_file"
-    echo "" >> "$readme_file"
+    echo "" > "$readme_file"
+
+    # If the section header is not already in the file, add it
+    if ! grep -q "## $dir" "$temp_file"; then
+        echo "## $dir" >> "$readme_file"
+    fi
     
+    # Add back the preserved lines
+    if [ -s "$temp_file" ]; then
+        cat "$temp_file" >> "$readme_file"
+        echo "" >> "$readme_file"
+    fi
+
     # Add hyperlinks to all files in the directory
     for file in "$dir"/*; do
         if [ -f "$file" ]; then
@@ -17,6 +34,9 @@ update_readme() {
             echo "- [$filename]($filename)" >> "$readme_file"
         fi
     done
+
+    # Clean up the temporary file
+    rm "$temp_file"
 }
 
 # Get the directory of the Java file
