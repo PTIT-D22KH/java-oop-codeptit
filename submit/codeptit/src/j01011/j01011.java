@@ -25,6 +25,6 @@ public class j01011 {
         return a;
     }
     public static long lcm(int a, int b) {
-        return a * b / gcd(a, b);
+        return (long) a * b / gcd(a, b);
     }
 }
