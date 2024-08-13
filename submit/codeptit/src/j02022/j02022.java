@@ -43,7 +43,7 @@ public class j02022 {
             }
         }
         for (int i = 1; i <= n; i++) {
-            System.out.printf("%d ", a[i]);
+            System.out.printf("%d", a[i]);
         }
         System.out.println();
     }
