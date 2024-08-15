@@ -1,12 +1,13 @@
 package j07051;
 
+// import java.util.Date;
+
 public class HotelInfo {
     private String roomId;
     private int floor;
     private MyDate checkInDate, checkOutDate;
     private long numDays;
     private long additionalCost, totalCost;
-    
 
     public HotelInfo(String roomId, String checkInString, String checkOutString, long additionalCost) {
         this.roomId = roomId;
@@ -17,24 +18,32 @@ public class HotelInfo {
         this.numDays = checkInDate.daysDiff(checkOutDate);
         this.totalCost = calTotalCost();
     }
+
     private long calTotalCost() {
         long res = 0;
-        if (floor == 1) {
-            res = 25 * this.numDays + additionalCost;
-        } else if (floor == 2) {
-            res = 34 * this.numDays + additionalCost;
-        } else if (floor == 3) {
-            res = 50 * this.numDays + additionalCost;
-        } else if (floor == 4) {
-            res = 80 * this.numDays + additionalCost;
+        switch (floor) {
+            case 1:
+                res = 25 * this.numDays + additionalCost;
+                break;
+            case 2:
+                res = 34 * this.numDays + additionalCost;
+                break;
+            case 3:
+                res = 50 * this.numDays + additionalCost;
+                break;
+            case 4:
+                res = 80 * this.numDays + additionalCost;
+                break;
         }
         return res;
     }
+
     public long getTotalCost() {
         return totalCost;
     }
+
     @Override
-    public String toString(){ 
+    public String toString() {
         return roomId + " " + numDays + " " + totalCost;
     }
 }
