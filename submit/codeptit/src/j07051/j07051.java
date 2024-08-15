@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class j07051 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        // Scanner input = new Scanner(new File("KHACHHANG.in"));
-        Scanner input = new Scanner(new File("j07051/KHACHHANG.in"));
+        Scanner input = new Scanner(new File("KHACHHANG.in"));
+        // Scanner input = new Scanner(new File("j07051/KHACHHANG.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Customer> a = new ArrayList<>(n);
         for (int i = 0; i < n ;i++) {
