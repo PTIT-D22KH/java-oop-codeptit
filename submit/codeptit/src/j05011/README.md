@@ -1,6 +1,6 @@
 ## ./j05011
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [Gamer$1.class](Gamer$1.class)
 - [Gamer.class](Gamer.class)
 - [Gamer.java](Gamer.java)

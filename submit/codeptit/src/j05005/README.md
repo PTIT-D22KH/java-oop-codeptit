@@ -1,6 +1,6 @@
 ## ./j05005
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [input.txt](input.txt)
 - [j05005.class](j05005.class)
 - [j05005.java](j05005.java)

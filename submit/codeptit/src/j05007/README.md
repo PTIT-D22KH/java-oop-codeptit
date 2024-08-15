@@ -1,6 +1,7 @@
 ## ./j05007
 ![alt text](image.png)
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 - [Employee$1.class](Employee$1.class)
 - [Employee.class](Employee.class)
 - [Employee.java](Employee.java)

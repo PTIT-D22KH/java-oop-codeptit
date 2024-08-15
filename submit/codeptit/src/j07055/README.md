@@ -1,6 +1,6 @@
 ## ./j07055
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [BANGDIEM.in](BANGDIEM.in)
 - [CompareByFinalScoreDesc.class](CompareByFinalScoreDesc.class)
 - [input.txt](input.txt)
