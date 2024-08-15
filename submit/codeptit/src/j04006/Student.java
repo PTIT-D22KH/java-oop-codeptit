@@ -3,7 +3,11 @@ package j04006;
 public class Student {
     private String id, name, className, dob;
     private double gpa;
-
+    
+    public Student() {
+        name = className = dob = "";
+        gpa = 0;
+    }
     public Student(String name, String className, String dob, double gpa) {
         this.id = "B20DCCN001";
         this.name = name;
