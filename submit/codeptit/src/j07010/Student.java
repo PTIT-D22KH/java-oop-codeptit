@@ -14,15 +14,14 @@ public class Student {
     }
 
     private String formatDob(String dob) {
-        String res = dob;
+        String new_dob = "";
         if (dob.charAt(2) != '/') {
-            res = "0" + res;
+            new_dob = "0" + dob;
         }
-        if (dob.charAt(5) != '/') {
-            res = res.substring(0, 3) + "0" + res.substring(3);
-
+        if (new_dob.charAt(5) != '/') {
+            new_dob = new_dob.substring(0, 3) + "0" + new_dob.substring(3); 
         }
-        return res;
+        return new_dob;
     }
 
     @Override
