@@ -7,10 +7,8 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class j07052 {
-    public static void main(String[] args) throws IOException{
-        // Write your code here
+    public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(new File("THISINH.in"));
-        // Scanner input = new Scanner(new File("j07052/THISINH.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Contestant> a = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
@@ -18,7 +16,7 @@ public class j07052 {
         }
         Collections.sort(a, new CompareByTotalScoreDesc());
         int m = Integer.parseInt(input.nextLine());
-        System.out.println(String.format("%.01f", a.get(m - 1).getTotalScore()));
+        System.out.println(String.format("%.1f", a.get(m - 1).getTotalScore()));
         for (Contestant x : a) {
             System.out.println(x);
         }

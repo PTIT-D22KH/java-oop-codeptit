@@ -5,15 +5,16 @@ import java.util.Comparator;
 public class Contestant {
     private String id, name, result;
     private double score1, score2, score3, priorityScore, totalScore;
+
     public Contestant(String id, String name, double score1, double score2, double score3) {
         this.id = id;
         this.name = formatName(name);
         this.score1 = score1;
         this.score2 = score2;
         this.score3 = score3;
-        if (id.charAt(2) == '1') {
+        if (id.substring(0, 3).equals("KV1")) {
             this.priorityScore = 0.5;
-        } else if (id.charAt(2) == '2') {
+        } else if (id.substring(0, 3).equals("KV2")) {
             this.priorityScore = 1;
         } else {
             this.priorityScore = 2.5;
@@ -21,34 +22,37 @@ public class Contestant {
         this.totalScore = this.score1 * 2 + this.score2 + this.score3 + this.priorityScore;
         if (this.totalScore < 24) {
             result = "TRUOT";
-        } else{
+        } else {
             result = "TRUNG TUYEN";
         }
     }
+
     private String formatName(String name) {
         name = name.toLowerCase();
-        String a[] = name.trim().split("\\s+");
+        String[] words = name.trim().split("\\s+");
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < a.length; i++) {
-            res.append(Character.toUpperCase(a[i].charAt(0))).append(a[i].substring(1));
-            if (i != a.length - 1) {
-                res.append(" ");
-            }
+        for (String word : words) {
+            res.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(" ");
         }
-        return res.toString();
+        return res.toString().trim();
     }
+
     public double getTotalScore() {
         return totalScore;
     }
+
     @Override
     public String toString() {
-        return id + " " + name + " " + (isRound(priorityScore) ? String.format("%.0f", priorityScore) : priorityScore) + " " + (isRound(this.totalScore) ? String.format("%.0f", this.totalScore) : this.totalScore) + " " + result;
-    }
-    private boolean isRound(double x) {
-        return (int)x - x == 0;
+        return id + " " + name + " " + formatScore(priorityScore) + " " + formatScore(totalScore) + " " + result;
     }
 
-    
+    private String formatScore(double score) {
+        if (score == (int) score) {
+            return String.format("%.0f", score);
+        } else {
+            return String.format("%.1f", score);
+        }
+    }
 }
 
 class CompareByTotalScoreDesc implements Comparator<Contestant> {
