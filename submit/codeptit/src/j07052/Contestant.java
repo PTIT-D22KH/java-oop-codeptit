@@ -3,7 +3,7 @@ package j07052;
 import java.util.Comparator;
 
 public class Contestant {
-    private String id, name, result;
+    private String id, name;
     private double score1, score2, score3, priorityScore, totalScore;
 
     public Contestant(String id, String name, double score1, double score2, double score3) {
@@ -20,11 +20,6 @@ public class Contestant {
             this.priorityScore = 2.5;
         }
         this.totalScore = this.score1 * 2 + this.score2 + this.score3 + this.priorityScore;
-        if (this.totalScore < 24) {
-            result = "TRUOT";
-        } else {
-            result = "TRUNG TUYEN";
-        }
     }
 
     private String formatName(String name) {
@@ -43,7 +38,7 @@ public class Contestant {
 
     @Override
     public String toString() {
-        return id + " " + name + " " + formatScore(priorityScore) + " " + formatScore(totalScore) + " " + result;
+        return id + " " + name + " " + formatScore(priorityScore) + " " + formatScore(totalScore);
     }
 
     private String formatScore(double score) {

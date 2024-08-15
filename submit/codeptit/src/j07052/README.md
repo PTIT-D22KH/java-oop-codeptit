@@ -17,3 +17,26 @@
 - [output.txt](output.txt)
 - [README.md](README.md)
 - [THISINH.in](THISINH.in)
+
+
+### Note
+Correct piece of code:
+```java
+int numPass = Integer.parseInt(input.nextLine());
+double lowestPoint = a.get(numPass - 1).getTotalScore();
+for (int i = numPass; i < a.size(); i++) {
+    if (a.get(i).getTotalScore() == lowestPoint) {
+        numPass++;
+    } else {
+        break;
+    }
+}
+System.out.println(String.format("%.1f", lowestPoint));
+for (int i = 0; i < a.size(); i++) {
+    if (i < numPass) {
+        System.out.println(a.get(i) + " " + "TRUNG TUYEN");
+    } else {
+        System.out.println(a.get(i) + " " + "TRUOT");
+    }
+}
+```

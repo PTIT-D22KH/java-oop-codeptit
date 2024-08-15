@@ -15,10 +15,22 @@ public class j07052 {
             a.add(new Contestant(input.nextLine(), input.nextLine(), Double.parseDouble(input.nextLine()), Double.parseDouble(input.nextLine()), Double.parseDouble(input.nextLine())));
         }
         Collections.sort(a, new CompareByTotalScoreDesc());
-        int m = Integer.parseInt(input.nextLine());
-        System.out.println(String.format("%.1f", a.get(m - 1).getTotalScore()));
-        for (Contestant x : a) {
-            System.out.println(x);
+        int numPass = Integer.parseInt(input.nextLine());
+        double lowestPoint = a.get(numPass - 1).getTotalScore();
+        for (int i = numPass; i < a.size(); i++) {
+            if (a.get(i).getTotalScore() == lowestPoint) {
+                numPass++;
+            } else {
+                break;
+            }
+        }
+        System.out.println(String.format("%.1f", lowestPoint));
+        for (int i = 0; i < a.size(); i++) {
+            if (i < numPass) {
+                System.out.println(a.get(i) + " " + "TRUNG TUYEN");
+            } else {
+                System.out.println(a.get(i) + " " + "TRUOT");
+            }
         }
         input.close();
     }
