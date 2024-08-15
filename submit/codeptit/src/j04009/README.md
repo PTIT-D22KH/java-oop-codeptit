@@ -1,6 +1,6 @@
 ## ./j04009
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [Edge.class](Edge.class)
 - [Edge.java](Edge.java)
 - [input.txt](input.txt)

@@ -1,6 +1,6 @@
 ## ./j05009
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [Contestant$1.class](Contestant$1.class)
 - [Contestant.class](Contestant.class)
 - [Contestant.java](Contestant.java)

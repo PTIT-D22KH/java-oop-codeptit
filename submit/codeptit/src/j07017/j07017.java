@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-import j04020.Pair;
-
 public class j07017 {
     public static void main(String[] args) throws IOException {
         // Scanner sc = new Scanner(new File("DATA.in"));

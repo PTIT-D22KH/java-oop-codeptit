@@ -1,6 +1,6 @@
 ## ./j07057
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [CompareByTotalScoreDescIdAsc.class](CompareByTotalScoreDescIdAsc.class)
 - [Contestant.class](Contestant.class)
 - [Contestant.java](Contestant.java)

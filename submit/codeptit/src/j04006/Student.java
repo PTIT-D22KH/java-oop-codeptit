@@ -3,7 +3,11 @@ package j04006;
 public class Student {
     private String id, name, className, dob;
     private double gpa;
-
+    
+    public Student() {
+        name = className = dob = "";
+        gpa = 0;
+    }
     public Student(String name, String className, String dob, double gpa) {
         this.id = "B20DCCN001";
         this.name = name;
@@ -16,7 +20,7 @@ public class Student {
         if (dob.charAt(2) != '/') {
             new_dob = "0" + dob;
         }
-        if (dob.charAt(5) != '/') {
+        if (new_dob.charAt(5) != '/') {
             new_dob = new_dob.substring(0, 3) + "0" + new_dob.substring(3); 
         }
         return new_dob;
