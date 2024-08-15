@@ -14,7 +14,7 @@ public class j03026 {
         String b = input.next();
         int n = a.length();
         int m = b.length();
-        if (n == m) {
+        if (a.equals(b)) {
             System.out.println("-1");
             return;
         }
