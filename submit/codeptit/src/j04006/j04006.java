@@ -1,6 +1,5 @@
 package j04006;
 
-import java.rmi.StubNotFoundException;
 import java.util.Scanner;
 
 public class j04006 {
