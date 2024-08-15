@@ -20,7 +20,7 @@ public class Student {
         if (dob.charAt(2) != '/') {
             new_dob = "0" + dob;
         }
-        if (dob.charAt(5) != '/') {
+        if (new_dob.charAt(5) != '/') {
             new_dob = new_dob.substring(0, 3) + "0" + new_dob.substring(3); 
         }
         return new_dob;
