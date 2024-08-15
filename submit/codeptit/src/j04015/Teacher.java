@@ -15,7 +15,7 @@ public class Teacher {
         } else if (this.role.equals("HP")) {
             stipend = 900000;
         } else if (this.role.equals("GV")) {
-            stipend = 50000;
+            stipend = 500000;
         }
         this.totalSal = this.salaryScales * this.basicSal + this.stipend;
     }
