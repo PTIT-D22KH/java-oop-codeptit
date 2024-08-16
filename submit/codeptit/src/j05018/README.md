@@ -1,6 +1,6 @@
 ## ./j05018
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [CompareByAvgScoreAndId.class](CompareByAvgScoreAndId.class)
 - [input.txt](input.txt)
 - [j05018.class](j05018.class)

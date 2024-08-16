@@ -1,6 +1,6 @@
 ## ./j05028
 ![alt text](image.png)
-
+![alt text](image-1.png)
 - [CompareByCapacity.class](CompareByCapacity.class)
 - [Enterprise.class](Enterprise.class)
 - [Enterprise.java](Enterprise.java)
