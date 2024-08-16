@@ -1,6 +1,7 @@
 ## ./j05034
 ![alt text](image.png)
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 - [CompareByName.class](CompareByName.class)
 - [input.txt](input.txt)
 - [j05034.class](j05034.class)
