@@ -1,6 +1,7 @@
 ## ./j05045
 ![alt text](image.png)
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 - [CompareByTotalSal.class](CompareByTotalSal.class)
 - [Employee.class](Employee.class)
 - [Employee.java](Employee.java)
