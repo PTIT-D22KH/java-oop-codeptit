@@ -1,5 +1,7 @@
 package StringLearn;
 
+import java.util.StringTokenizer;
+
 public class StringLearn {
     public static void main(String[] args) {
         // Write your code here
@@ -27,5 +29,12 @@ public class StringLearn {
         System.out.println(s.startsWith("Hel"));
         System.out.println(s.endsWith("!"));
         System.out.println(s.chars().distinct().count());
+
+        //pattern: String(static) needs to have Builder(helper) class 
+        StringBuilder temp = new StringBuilder(s);
+        
+        StringTokenizer token = new StringTokenizer(s);
+        System.out.println(token.nextToken());
+
     }
-}
+    
