@@ -1,6 +1,7 @@
 package J02006;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -19,6 +20,7 @@ public class J02006 {
             res.add(input.nextInt());
         }
         ArrayList<Integer> a = new ArrayList<>(res);
+        Collections.sort(a);
         for (int x : a) {
             System.out.printf("%d ", x);
         }
