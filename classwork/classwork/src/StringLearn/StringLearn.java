@@ -20,8 +20,12 @@ public class StringLearn {
         if (s.equals(x)) {
             System.out.println("s equals x");
         } 
-        if (s.equals(y)) {
+        if (s.equalsIgnoreCase(y)) {
             System.out.println("s equals y");
         }
+
+        System.out.println(s.startsWith("Hel"));
+        System.out.println(s.endsWith("!"));
+        System.out.println(s.chars().distinct().count());
     }
 }
