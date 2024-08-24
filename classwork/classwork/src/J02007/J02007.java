@@ -9,18 +9,22 @@ public class J02007 {
         int t = input.nextInt();
         for (int j = 1; j <= t; j++) {
             int n = input.nextInt();
+            int a[] = new int[n];
             Map<Integer, Integer> mp = new HashMap<>();
             for (int i = 0; i < n; i++){
-                int x = input.nextInt();
-                if (mp.containsKey(x)) {
-                    mp.put(x, mp.get(x) + 1);
+                a[i] = input.nextInt();
+                if (mp.containsKey(a[i])) {
+                    mp.put(a[i], mp.get(a[i]) + 1);
                 } else {
-                    mp.put(x, 1);
+                    mp.put(a[i], 1);
                 }
             }
             System.out.printf("Test %d:\n", j);
-            for (Map.Entry<Integer, Integer> entry : mp.entrySet()) {
-                System.out.printf("%d xuat hien %d lan\n", entry.getKey(), entry.getValue());
+            for (int i = 0; i < n; i++) {
+                if (mp.containsKey(a[i])) {
+                    System.out.printf("%d xuat hien %d lan\n", a[i], mp.get(a[i]));
+                    mp.remove(a[i]);
+                }
             }
         }
         input.close();
