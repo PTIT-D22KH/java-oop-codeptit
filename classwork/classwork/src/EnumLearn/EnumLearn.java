@@ -1,8 +1,14 @@
 package EnumLearn;
 
 public class EnumLearn {
+
+    public enum Monster {
+        ZOMBIE, VAMPIRE, DEMON, WEREWOLF
+    }
+
     public static void main(String[] args) {
-        // Write your code here
-        public enum Monster(ZOMBIE, VAMPIRE, DEMON, WEREWOLF);
+        // Example usage of the enum
+        Monster myMonster = Monster.ZOMBIE;
+        System.out.println("My monster is: " + myMonster);
     }
 }
