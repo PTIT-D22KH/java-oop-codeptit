@@ -23,16 +23,17 @@ public class Contestant {
         return 2024 - year;
     }
     private String calResult() {
-        if (totalScore >= 9) {
-            return "Xuat sac";
-        } else if (totalScore == 8) {
-            return "Gioi";
+        if (totalScore < 5) {
+            return "Truot";
+        } else if (totalScore < 7) {
+            return "Trung binh";
         } else if (totalScore == 7) {
             return "Kha";
-        } else if (totalScore >= 5 && totalScore <= 6) {
-            return "Trung binh";
+        } else if (totalScore == 8) {
+            return "Gioi";
+        } else {
+            return "Xuat sac";
         }
-        return "Truot";
     }
     private double calTotalScore(){ 
         double sum = (score1 + score2) / 2.0 + rewardScore;
