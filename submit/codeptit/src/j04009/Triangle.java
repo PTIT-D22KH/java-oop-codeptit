@@ -10,7 +10,7 @@ public class Triangle {
         return (a.length > 0 && b.length > 0 && c.length > 0 && a.length + b.length > c.length && a.length + c.length > b.length && b.length + c.length > a.length);
     }
     private double calArea() {
-        return Math.sqrt((a.length + b.length + c.length) * (a.length + b.length - c.length) * (b.length + c.length - a.length) * (c.length + a.length -  b.length)) / 4.0;
+        return Math.sqrt((a.length + b.length + c.length) * (a.length + b.length - c.length) * (- a.length + b.length + c.length ) * ( a.length -  b.length + c.length )) / 4.0;
     }
     public Triangle(Edge a, Edge b, Edge c) {
         
