@@ -22,7 +22,7 @@ public class Contestant {
     private int calAge(String dob) {
         String[] a = dob.split("/");
         int year = Integer.parseInt(a[2]);
-        return 2024 - year;
+        return 2021 - year;
     }
 
     private String calResult() {
