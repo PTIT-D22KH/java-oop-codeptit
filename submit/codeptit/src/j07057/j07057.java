@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class j07057 {
     public static void main(String[] args)throws IOException {
         // Write your code here
-        Scanner input = new Scanner(new File("j07057/THISINH.in"));
+        // Scanner input = new Scanner(new File("j07057/THISINH.in"));
+        Scanner input = new Scanner(new File("THISINH.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Contestant> a = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
