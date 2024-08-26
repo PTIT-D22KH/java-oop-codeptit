@@ -4,7 +4,8 @@ public class Contestant {
     private String id, name, dob, result;
     private static int count = 0;
     private int age;
-    private double score1, score2 , rewardScore, totalScore;
+    private double score1, score2, rewardScore, totalScore;
+
     public Contestant(String name, String dob, double score1, double score2) {
         this.name = formatName(name);
         this.dob = dob;
@@ -17,11 +18,13 @@ public class Contestant {
         this.totalScore = calTotalScore();
         this.result = calResult();
     }
+
     private int calAge(String dob) {
-        String a[] = dob.split("/");
+        String[] a = dob.split("/");
         int year = Integer.parseInt(a[2]);
         return 2024 - year;
     }
+
     private String calResult() {
         if (totalScore < 5) {
             return "Truot";
@@ -35,41 +38,43 @@ public class Contestant {
             return "Xuat sac";
         }
     }
-    private double calTotalScore(){ 
+
+    private double calTotalScore() {
         double sum = (score1 + score2) / 2.0 + rewardScore;
         if (sum > 10.0) {
             return 10.0;
         }
         return roundDouble(sum);
     }
+
     private double roundDouble(double n) {
         return Math.round(n);
     }
-    private double calRewardScore(){
+
+    private double calRewardScore() {
         if (score1 >= 8 && score2 >= 8) {
             return 1.0;
         } else if (score1 >= 7.5 && score2 >= 7.5) {
             return 0.5;
-        } 
+        }
         return 0.0;
     }
 
     private String formatName(String s) {
-        String a[] = s.trim().split("\\s+");
+        String[] a = s.trim().split("\\s+");
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < a.length; i++) {
-            res.append(Character.toUpperCase(a[i].charAt(0)));
-            for (int j = 1; j < a[i].length(); j++ ){
-                res.append(Character.toLowerCase(a[i].charAt(j)));
+        for (String word : a) {
+            res.append(Character.toUpperCase(word.charAt(0)));
+            for (int j = 1; j < word.length(); j++) {
+                res.append(Character.toLowerCase(word.charAt(j)));
             }
             res.append(" ");
         }
         return res.toString().trim();
     }
+
     @Override
-    public String toString (){
+    public String toString() {
         return id + " " + name + " " + age + String.format(" %.0f ", totalScore) + result;
     }
-    
-
 }
