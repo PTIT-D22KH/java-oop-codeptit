@@ -20,7 +20,7 @@ public class J08012 {
                 return;
             }
         }
-        System.out.println("YES");
+        System.out.println("Yes");
 
         input.close();
     }
