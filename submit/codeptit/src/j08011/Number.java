@@ -13,17 +13,21 @@ public class Number {
         count++;
         this.id = count;
     }
+
     public int getFre() {
         return fre;
     }
+
     public int getId() {
         return id;
     }
+
     @Override
     public String toString() {
         return number + " " + fre;
     }
 }
+
 class CompareByFreDescIdAsc implements Comparator<Number> {
     @Override
     public int compare(Number a, Number b) {
@@ -33,5 +37,4 @@ class CompareByFreDescIdAsc implements Comparator<Number> {
         }
         return res;
     }
-    
 }
