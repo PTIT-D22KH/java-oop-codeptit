@@ -19,7 +19,10 @@ public class Customer {
         this.address = address;
     }
     private String formatName(String name) {
-        String a[] = name.trim().split(" ");
+        String a[] = name.trim().split("\\s+");
+        // for (String x : a) {
+        //     System.out.println(x);
+        // }
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < a.length; i++) {
             res.append(Character.toUpperCase(a[i].charAt(0))).append(a[i].substring(1).toLowerCase());
