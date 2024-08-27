@@ -12,8 +12,8 @@ public class J07008 {
     private static ArrayList<Integer> num = new ArrayList<>();
     public static void main(String[] args) throws FileNotFoundException, IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07008/DAYSO.in"));
-        // Scanner input = new Scanner(new File("DAYSO.in"));
+        // Scanner input = new Scanner(new File("J07008/DAYSO.in"));
+        Scanner input = new Scanner(new File("DAYSO.in"));
         n = input.nextInt();
         a = new int[n];
         for (int i = 0; i < n; i++) {
