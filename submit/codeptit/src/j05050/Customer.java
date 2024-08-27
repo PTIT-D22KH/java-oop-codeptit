@@ -52,6 +52,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return id + " " + String.format("%.0f ", coefficient) + String.format("%.0f ", basicCost) + String.format("%.0f ", extra) + String.format("%.0f", totalCost);
+        return id + " " + String.format("%.0f", coefficient) + " " + String.format("%.0f", basicCost) + " " + String.format("%.0f", extra) + " " + String.format("%.0f", totalCost);
     }
 }
