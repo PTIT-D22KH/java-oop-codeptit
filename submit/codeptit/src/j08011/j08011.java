@@ -17,7 +17,12 @@ public class j08011 {
             String[] x = s.split("\\s+");
             for (String value : x) {
                 if (check(value)) {
-                    mp.put(value, mp.getOrDefault(value, 0) + 1);
+                    if (mp.containsKey(value)) {
+                        mp.put(value, mp.get(value) + 1);
+                    } else {
+                        mp.put(value, 1);
+                    }
+                    // mp.put(value, mp.getOrDefault(value, 0) + 1);
                 }
             }
         }
