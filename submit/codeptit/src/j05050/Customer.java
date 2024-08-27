@@ -40,7 +40,7 @@ public class Customer {
         if (numUsed < 50) {
             return 0;
         } else if (numUsed <= 100) {
-            return Math.round(basicCost * 0.35);
+            return Math.ceil(basicCost * 0.35);
         } else {
             return basicCost;
         }
