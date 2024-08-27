@@ -12,12 +12,12 @@ public class Student {
         this.email = email;
     }
 
-    // public String getClassName() {
-    //     return className;
-    // }
-    public String getId() {
-        return id;
+    public String getClassName() {
+        return className;
     }
+    // public String getId() {
+    //     return id;
+    // }
     @Override
     public String toString() {
         return id + " " + name + " " + className + " " + email;

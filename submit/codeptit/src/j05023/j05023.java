@@ -19,7 +19,7 @@ public class j05023 {
             String year = s.substring(2);
             System.out.printf("DANH SACH SINH VIEN KHOA %s:\n", s);
             for (Student x : a) {
-                if (x.getId().substring(1,3).equals(year)) {
+                if (x.getClassName().substring(1,3).equals(year)) {
                     System.out.println(x);
                 }
             }
