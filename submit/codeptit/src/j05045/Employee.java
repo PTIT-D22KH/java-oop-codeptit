@@ -49,6 +49,9 @@ public class Employee {
     public double getTotalSal() {
         return totalSal;
     }
+    public String getId() {
+        return id;
+    }
     @Override
     public String toString() {
         return id + " " + name + " " + String.format("%.0f", stipend) + " " + String.format("%.0f", monthlySal) + " " + String.format("%.0f", advancedSal) + " " + String.format("%.0f", remainSal);
@@ -58,9 +61,10 @@ public class Employee {
 class CompareByTotalSal implements Comparator<Employee> {
     @Override
     public int compare(Employee a, Employee b) {
-        if (a.getTotalSal() < b.getTotalSal()) {
-            return 1;
+        int compareTotalSal = Double.compare(b.getTotalSal(), a.getTotalSal());
+        if (compareTotalSal == 0) {
+            return a.getId().compareTo(b.getId());
         }
-        return -1;
+        return compareTotalSal;
     }
 }
