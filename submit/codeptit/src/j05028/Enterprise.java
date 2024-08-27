@@ -10,6 +10,9 @@ public class Enterprise {
         this.name = name;
         this.capacity = capacity;
     }
+    public String getId() {
+        return id;
+    }
     public int getCapacity() {
         return capacity;
     }
@@ -21,9 +24,10 @@ public class Enterprise {
 class CompareByCapacity implements Comparator<Enterprise> {
     @Override
     public int compare(Enterprise a, Enterprise b) {
-        if (a.getCapacity() < b.getCapacity()) {
-            return 1;
+        int compareByCapacity = Integer.compare(b.getCapacity(), a.getCapacity());
+        if (compareByCapacity == 0) {
+            return a.getId().compareTo(b.getId());
         }
-        return -1;
+        return compareByCapacity;
     }
 }
