@@ -5,48 +5,32 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
-
+import java.util.*;
 public class j08011 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        Map<String, Integer> mp = new TreeMap<>();
-        ArrayList<Number> numbers = new ArrayList<>();
-        while (input.hasNextLine()) {
-            String s = input.nextLine().trim();
-            String[] x = s.split("\\s+");
-            for (String value : x) {
-                if (check(value)) {
-                    if (mp.containsKey(value)) {
-                        mp.put(value, mp.get(value) + 1);
-                    } else {
-                        mp.put(value, 1);
-                    }
-                    // mp.put(value, mp.getOrDefault(value, 0) + 1);
-                }
-            }
-        }
-        for (Map.Entry<String, Integer> entry : mp.entrySet()) {
-            Number number = new Number(entry.getKey(), entry.getValue());
-            numbers.add(number);
-        }
-        Collections.sort(numbers, new CompareByFreDescIdAsc());
-        for (Number number : numbers) {
-            System.out.println(number);
-        }
-
-        input.close();
-    }
-
     public static boolean check(String s) {
-        if (s.length() > 9) {
-            return false;
-        }
         for (int i = 0; i < s.length() - 1; i++) {
-            if (s.charAt(i) > s.charAt(i + 1)) {
-                return false;
-            }
+            if (s.charAt(i) > s.charAt(i + 1)) return false;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, Number> map = new HashMap<>();
+        ArrayList<Number> a = new ArrayList<>();
+        while (sc.hasNext()) {
+            String s = sc.next();
+            if (!check(s)) continue;
+            if (map.containsKey(s)) {
+                map.get(s).incrementFrequency();
+            } else {
+                Number num = new Number(s, 1);
+                map.put(s, num);
+                a.add(num);
+            }
+        }
+        Collections.sort(a, new CompareByFreDescIdAsc());
+        for (Number x : a) System.out.println(x);
+        sc.close();
     }
 }

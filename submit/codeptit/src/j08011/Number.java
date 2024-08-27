@@ -4,37 +4,46 @@ import java.util.Comparator;
 
 public class Number {
     private String number;
-    private int id, fre;
+    private int frequency;
+    private int id;
     private static int count = 0;
 
-    public Number(String number, int fre) {
+    public Number(String number, int frequency) {
         this.number = number;
-        this.fre = fre;
+        this.frequency = frequency;
         count++;
         this.id = count;
     }
 
-    public int getFre() {
-        return fre;
+    public String getNumber() {
+        return number;
+    }
+
+    public int getFrequency() {
+        return frequency;
     }
 
     public int getId() {
         return id;
     }
 
+    public void incrementFrequency() {
+        this.frequency++;
+    }
+
     @Override
     public String toString() {
-        return number + " " + fre;
+        return number + " " + frequency;
     }
 }
 
 class CompareByFreDescIdAsc implements Comparator<Number> {
     @Override
-    public int compare(Number a, Number b) {
-        int res = Integer.compare(b.getFre(), a.getFre());
-        if (res == 0) {
-            return Integer.compare(a.getId(), b.getId());
+    public int compare(Number o1, Number o2) {
+        int freqCompare = Integer.compare(o2.getFrequency(), o1.getFrequency());
+        if (freqCompare == 0) {
+            return Integer.compare(o1.getId(), o2.getId());
         }
-        return res;
+        return freqCompare;
     }
 }
