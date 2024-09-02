@@ -8,7 +8,8 @@ import java.io.*;
 public class J07058 {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07058/MONHOC.in"));
+        // Scanner input = new Scanner(new File("J07058/MONHOC.in"));
+        Scanner input = new Scanner(new File("MONHOC.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Course> a = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
