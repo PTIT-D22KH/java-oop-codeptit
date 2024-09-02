@@ -4,7 +4,8 @@ import java.io.*;
 public class J07046 {
     public static void main(String[] args) throws IOException, FileNotFoundException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07046/KHACH.in"));
+        // Scanner input = new Scanner(new File("J07046/KHACH.in"));
+        Scanner input = new Scanner(new File("KHACH.in"));
 
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Customer> a = new ArrayList<>(n);
@@ -15,6 +16,7 @@ public class J07046 {
         for (Customer x : a) {
             System.out.println(x);
         }
+        input.close();
         
     }
 }
