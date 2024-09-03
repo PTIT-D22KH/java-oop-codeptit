@@ -9,20 +9,16 @@ public class Triangle {
         this.b = new Edge(x, z);
         this.c = new Edge(y, z);
         this.perimeter = a.getDistance() + b.getDistance() + c.getDistance();
-
     }
 
     public boolean valid() {
-        if (a.getDistance() < 0 || b.getDistance() < 0|| c.getDistance() < 0|| (a.getDistance() + b.getDistance() <= c.getDistance()) || (a.getDistance() + c.getDistance() <= b.getDistance()) || (b.getDistance() + c.getDistance() < a.getDistance())) { 
-            return false;
-        }
-        return true;
+        double d1 = a.getDistance();
+        double d2 = b.getDistance();
+        double d3 = c.getDistance();
+        return d1 > 0 && d2 > 0 && d3 > 0 && (d1 + d2 > d3) && (d1 + d3 > d2) && (d2 + d3 > d1);
     }
-
-
 
     public String getPerimeter() {
         return String.format("%.3f", perimeter);
     }
-    
 }

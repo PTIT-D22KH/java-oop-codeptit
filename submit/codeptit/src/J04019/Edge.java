@@ -9,6 +9,7 @@ public class Edge {
         this.b = b;
         this.distance = a.getDistance(b);
     }
+
     public double getDistance() {
         return distance;
     }
