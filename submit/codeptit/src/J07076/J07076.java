@@ -4,8 +4,8 @@ import java.io.*;
 public class J07076 {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07076/MATRIX.in"));
-
+        // Scanner input = new Scanner(new File("J07076/MATRIX.in"));
+        Scanner input = new Scanner(new File("MATRIX.in"));
         int t = input.nextInt();
         while (t-- > 0) {
             int n = input.nextInt();
