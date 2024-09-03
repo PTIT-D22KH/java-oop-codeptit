@@ -1,9 +1,9 @@
 package J04014;
 
 public class Fraction {
-    private int numerator, denominator;
+    private long numerator, denominator;
 
-    public Fraction(int numerator, int denominator) {
+    public Fraction(long numerator, long denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("Denominator cannot be zero.");
         }
@@ -16,9 +16,9 @@ public class Fraction {
         this.simplify();
     }
 
-    private int gcd(int a, int b) {
+    private long gcd(long a, long b) {
         while (b != 0) {
-            int r = a % b;
+            long r = a % b;
             a = b;
             b = r;
         }
@@ -26,14 +26,14 @@ public class Fraction {
     }
 
     private void simplify() {
-        int gcd = gcd(numerator, denominator);
+        long gcd = gcd(numerator, denominator);
         numerator /= gcd;
         denominator /= gcd;
     }
 
     public Fraction addFraction(Fraction other) {
-        int lcm = this.denominator * other.denominator / gcd(this.denominator, other.denominator);
-        int numeratorSum = this.numerator * (lcm / this.denominator) + other.numerator * (lcm / other.denominator);
+        long lcm = this.denominator * (other.denominator / gcd(this.denominator, other.denominator));
+        long numeratorSum = this.numerator * (lcm / this.denominator) + other.numerator * (lcm / other.denominator);
         return new Fraction(numeratorSum, lcm);
     }
 
