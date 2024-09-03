@@ -4,6 +4,11 @@ public class Fraction {
     private int numerator, denominator;
 
     public Fraction(int numerator, int denominator) {
+        
+        if (denominator < 0) {
+            numerator = -numerator;
+            denominator = -denominator;
+        }
         this.numerator = numerator;
         this.denominator = denominator;
         this.simplify();

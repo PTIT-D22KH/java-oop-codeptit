@@ -15,5 +15,6 @@ public class J04014 {
             System.out.print(c);
             System.out.println(" " + d);
         }
+        input.close();
     }
 }
