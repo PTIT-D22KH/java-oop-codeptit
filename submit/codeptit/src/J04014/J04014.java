@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class J04014 {
     public static void main(String[] args) {
-        // Write your code here
         Scanner input = new Scanner(System.in);
         int t = input.nextInt();
-        while(t-- > 0) {
+        while (t-- > 0) {
             Fraction a = new Fraction(input.nextInt(), input.nextInt());
             Fraction b = new Fraction(input.nextInt(), input.nextInt());
             Fraction c = a.addFraction(b).multiplyFraction(a.addFraction(b));

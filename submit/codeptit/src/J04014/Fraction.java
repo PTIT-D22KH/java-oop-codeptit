@@ -4,7 +4,9 @@ public class Fraction {
     private int numerator, denominator;
 
     public Fraction(int numerator, int denominator) {
-        
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator cannot be zero.");
+        }
         if (denominator < 0) {
             numerator = -numerator;
             denominator = -denominator;
@@ -13,18 +15,16 @@ public class Fraction {
         this.denominator = denominator;
         this.simplify();
     }
+
     private int gcd(int a, int b) {
         while (b != 0) {
             int r = a % b;
             a = b;
             b = r;
-
         }
         return a;
     }
-    private int lcm(int a, int b) {
-        return a * b / gcd(a, b);
-    }
+
     private void simplify() {
         int gcd = gcd(numerator, denominator);
         numerator /= gcd;
@@ -32,20 +32,17 @@ public class Fraction {
     }
 
     public Fraction addFraction(Fraction other) {
-        int ms = lcm(this.denominator, other.denominator);
-        int x = ms / this.denominator * this.numerator + ms/other.denominator * other.numerator;
-        return new Fraction(x, ms);
+        int lcm = this.denominator * other.denominator / gcd(this.denominator, other.denominator);
+        int numeratorSum = this.numerator * (lcm / this.denominator) + other.numerator * (lcm / other.denominator);
+        return new Fraction(numeratorSum, lcm);
     }
- 
+
     public Fraction multiplyFraction(Fraction other) {
         return new Fraction(this.numerator * other.numerator, this.denominator * other.denominator);
     }
 
     @Override
     public String toString() {
-        if (denominator < 0) {
-            return (numerator * -1) + "/" + (denominator * -1);
-        } 
         return numerator + "/" + denominator;
     }
 }
