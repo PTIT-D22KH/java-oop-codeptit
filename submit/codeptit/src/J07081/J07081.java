@@ -5,7 +5,7 @@ public class J07081 {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         // Write your code here
         // Scanner input = new Scanner(new File("J07081/SINHVIEN.in"));
-        Scanner input = new Scanner(new File("J07081/SINHVIEN.in"));
+        Scanner input = new Scanner(new File("SINHVIEN.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Student> a = new ArrayList<>();
         for (int i = 0; i < n; i++) {
