@@ -3,16 +3,16 @@ package J04019;
 import java.util.Scanner;
 
 public class Point {
-    private int x, y;
+    private double x, y;
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
     public static Point nextPoint(Scanner sc) {
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+        double x = sc.nextDouble();
+        double y = sc.nextDouble();
         return new Point(x, y);
     }
 
