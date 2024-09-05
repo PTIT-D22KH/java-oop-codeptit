@@ -1,5 +1,5 @@
-package J05057;
-
+package J05058;
+import java.util.*;
 public class Contestant {
     private String id, name, result;
     private int area;
@@ -41,20 +41,35 @@ public class Contestant {
         }
         return "TRUNG TUYEN";
     }
-
+    public double getTotalScore() {
+        return totalScore;
+    }
+    public String getId() {
+        return id;
+    }
     @Override
     public String toString(){ 
-        if (basicScore- (int)(basicScore) == 0.0) {
+        if (totalScore- (int)(totalScore) == 0.0) {
             if (priorityScore - (int)(priorityScore) == 0.0) {
-                return id + " " + name + String.format(" %.0f", priorityScore) + String.format(" %.0f ", basicScore) + result;
+                return id + " " + name + String.format(" %.0f", priorityScore) + String.format(" %.0f ", totalScore) + result;
             }
-            return id + " " + name + String.format(" %.1f", priorityScore) + String.format(" %.0f ", basicScore) + result;
+            return id + " " + name + String.format(" %.1f", priorityScore) + String.format(" %.0f ", totalScore) + result;
         } else {
             if (priorityScore - (int)(priorityScore) == 0.0) {
-                return id + " " + name + String.format(" %.0f", priorityScore) + String.format(" %.1f ", basicScore) + result;
+                return id + " " + name + String.format(" %.0f", priorityScore) + String.format(" %.1f ", totalScore) + result;
             }
-            return id + " " + name + String.format(" %.1f", priorityScore) + String.format(" %.1f ", basicScore) + result;
+            return id + " " + name + String.format(" %.1f", priorityScore) + String.format(" %.1f ", totalScore) + result;
         }
         
+    }
+}
+class CompareByTotalScoreAndId implements Comparator<Contestant> {
+    @Override
+    public int compare(Contestant a, Contestant b) {
+        int cmpTotalScore = Double.compare(b.getTotalScore(), a.getTotalScore());
+        if (cmpTotalScore == 0) {
+            return a.getId().compareTo(b.getId());
+        }
+        return cmpTotalScore;
     }
 }
