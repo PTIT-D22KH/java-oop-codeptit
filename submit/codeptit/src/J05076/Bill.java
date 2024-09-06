@@ -4,27 +4,17 @@ public class Bill {
     private Product product;
     private long numImport, singlePrice, numExport, totalImportCost, totalExportValue;
 
-    public Bill(String id, String name, String rank) {
-        this.product = new Product(id, name, rank);
-        this.numExport = 0;
-        this.singlePrice = 0;
-        this.numImport = 0;
+    public Bill(Product product, String id, long numImport, long singlePrice, long numExport) {
+        this.product = product;
+        this.numImport = numImport;
+        this.singlePrice = singlePrice;
+        this.numExport = numExport;
+        this.calTotalImportCost();
+        this.calTotalExportValue();
     }
 
     public Product getProduct() {
         return product;
-    }
-
-    public void setNumExport(long numExport) {
-        this.numExport = numExport;
-    }
-
-    public void setNumImport(long numImport) {
-        this.numImport = numImport;
-    }
-
-    public void setSinglePrice(long singlePrice) {
-        this.singlePrice = singlePrice;
     }
 
     public void calTotalImportCost() {
@@ -32,7 +22,7 @@ public class Bill {
     }
 
     public void calTotalExportValue() {
-        this.totalExportValue = (long) (singlePrice * (1 + this.product.getInterestRate())) * numExport;
+        this.totalExportValue = (long) (singlePrice * numExport + singlePrice * numExport * product.getInterestRate());
     }
 
     @Override
