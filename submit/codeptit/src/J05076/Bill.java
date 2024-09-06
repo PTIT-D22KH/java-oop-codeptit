@@ -10,32 +10,33 @@ public class Bill {
         this.singlePrice = 0;
         this.numImport = 0;
     }
+
     public Product getProduct() {
         return product;
     }
-    
+
     public void setNumExport(long numExport) {
         this.numExport = numExport;
     }
+
     public void setNumImport(long numImport) {
         this.numImport = numImport;
     }
+
     public void setSinglePrice(long singlePrice) {
         this.singlePrice = singlePrice;
     }
 
-
-    public void calTotalImportCost(){ 
+    public void calTotalImportCost() {
         this.totalImportCost = numImport * singlePrice;
     }
-    public void calTotalExportValue(){ 
-        this.totalExportValue = (long) (singlePrice * (this.product.getInterestRate() + 1.0))  * numExport;
+
+    public void calTotalExportValue() {
+        this.totalExportValue = (long) (singlePrice * (1 + this.product.getInterestRate())) * numExport;
     }
 
     @Override
     public String toString() {
         return product + " " + totalImportCost + " " + totalExportValue;
     }
-
-
 }

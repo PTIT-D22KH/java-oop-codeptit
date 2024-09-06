@@ -4,26 +4,30 @@ public class Product {
     private String id, name, rank;
     private double interestRate;
 
-    public Product(String id, String name, String rank)  {
+    public Product(String id, String name, String rank) {
         this.id = id;
         this.name = name;
         this.rank = rank;
         this.interestRate = calInterestRate();
     }
+
     private double calInterestRate() {
-        if (rank.equals("A")) {
-            return 0.08;
-        } else if (rank.equals("B")) {
-            return 0.05;
-        } else if (rank.equals("C")) {
-            return 0.02;
+        switch (rank) {
+            case "A":
+                return 0.08;
+            case "B":
+                return 0.05;
+            case "C":
+                return 0.02;
+            default:
+                return 0;
         }
-        return 0;
     }
-    
+
     public String getId() {
         return id;
     }
+
     public double getInterestRate() {
         return interestRate;
     }
@@ -32,5 +36,4 @@ public class Product {
     public String toString() {
         return id + " " + name;
     }
-    
 }
