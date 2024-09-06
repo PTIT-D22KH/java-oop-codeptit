@@ -16,9 +16,18 @@ public class Course {
     public static Map<String, String> getCourseIdToNameMap() {
         return courseIdToNameMap;
     }
+    public String getGroup() {
+        return group;
+    }
     @Override
     public String toString(){ 
         return group + " " + lecturerName;
     }
     
+}
+class CompareByGroup implements Comparator<Course> {
+    @Override
+    public int compare(Course a, Course b) {
+        return a.getGroup().compareTo(b.getGroup());
+    }
 }

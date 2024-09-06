@@ -9,6 +9,7 @@ public class J05079 {
         for (int i = 0; i < n; i++) {
             a.add(new Course(input.nextLine(), input.nextLine(), input.nextLine(), input.nextLine()));
         }
+        Collections.sort(a, new CompareByGroup());
         int m = Integer.parseInt(input.nextLine());
         for (int i = 0; i < m; i++) {
             String courseId = input.nextLine();
