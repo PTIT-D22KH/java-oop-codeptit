@@ -1,6 +1,6 @@
-package J05077;
+package J05078;
 import java.util.*;
-public class J05077 {
+public class J05078 {
     public static void main(String[] args) {
         // Write your code here
         Scanner input = new Scanner(System.in);
@@ -13,8 +13,13 @@ public class J05077 {
         for (int i = 0; i < m; i++) {
             a.add(new Employee(input.nextLine(), input.nextLine(), Long.parseLong(input.nextLine()), Long.parseLong(input.nextLine())));
         }
+        String departmentId = input.nextLine();
+        System.out.printf("Bang luong phong %s:\n", Department.getDepartmentMap().get(departmentId).getName());
         for (Employee x : a) {
-            System.out.println(x);
+            if (x.getDepartment().getId().equals(departmentId)) {
+                System.out.println(x);
+            }
+            
         }
         input.close();
     }
