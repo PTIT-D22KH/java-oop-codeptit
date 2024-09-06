@@ -5,11 +5,11 @@ import java.io.*;
 public class J07075 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input1 = new Scanner(new File("J07075/MONHOC.in"));
-        Scanner input2 = new Scanner(new File("J07075/LICHGD.in"));
+        // Scanner input1 = new Scanner(new File("J07075/MONHOC.in"));
+        // Scanner input2 = new Scanner(new File("J07075/LICHGD.in"));
 
-        // Scanner input1 = new Scanner(new File("MONHOC.in"));
-        // Scanner input2 = new Scanner(new File("LICHGD.in"));
+        Scanner input1 = new Scanner(new File("MONHOC.in"));
+        Scanner input2 = new Scanner(new File("LICHGD.in"));
         int n = Integer.parseInt(input1.nextLine());
         ArrayList<Course> courses = new ArrayList<>();
         for (int i = 0; i < n; i++) {
