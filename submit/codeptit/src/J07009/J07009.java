@@ -8,8 +8,8 @@ import java.util.*;
 
 public class J07009 {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("J07009/DATA.in"));
-        // Scanner sc = new Scanner(new File("DATA.in"));
+        // Scanner sc = new Scanner(new File("J07009/DATA.in"));
+        Scanner sc = new Scanner(new File("DATA.in"));
         int n = sc.nextInt(), m = sc.nextInt(), a[] = new int[n], b[] = new int[m];
         for(int i = 0; i<n; i++) a[i] = sc.nextInt();
         for(int i = 0; i<m; i++) b[i] = sc.nextInt();
