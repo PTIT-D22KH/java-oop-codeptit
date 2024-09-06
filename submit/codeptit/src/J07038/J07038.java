@@ -4,9 +4,13 @@ import java.io.*;
 public class J07038 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input1 = new Scanner(new File("J07038/SINHVIEN.in"));
-        Scanner input2 = new Scanner(new File("J07038/DN.in"));
-        Scanner input3 = new Scanner(new File("J07038/THUCTAP.in"));
+        // Scanner input1 = new Scanner(new File("J07038/SINHVIEN.in"));
+        // Scanner input2 = new Scanner(new File("J07038/DN.in"));
+        // Scanner input3 = new Scanner(new File("J07038/THUCTAP.in"));
+        
+        Scanner input1 = new Scanner(new File("SINHVIEN.in"));
+        Scanner input2 = new Scanner(new File("DN.in"));
+        Scanner input3 = new Scanner(new File("THUCTAP.in"));
 
         int n = Integer.parseInt(input1.nextLine());
         ArrayList<Student> a = new ArrayList<>();
