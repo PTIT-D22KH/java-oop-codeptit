@@ -25,23 +25,33 @@ public class Product {
     }
 
     private void preSetTaxAndShippingFee() {
-        if (firstId.equals("T")) {
-            this.tax = 0.29;
-            this.shippingFee = 0.04;
-        } else if (firstId.equals("C")) {
-            this.tax = 0.1;
-            this.shippingFee = 0.03;
-        } else if (firstId.equals("D")) {
-            this.tax = 0.08;
-            this.shippingFee = 0.025;
-        } else if (firstId.equals("M")) {
-            this.tax = 0.02;
-            this.shippingFee = 0.005;
-        }
         if (lastId.equals("C")) {
-            this.tax -= 0.05;
-            if (this.tax < 0) {
-                this.tax = 0;
+            if (firstId.equals("T")) {
+                this.tax = 0.29 * 0.95;
+                this.shippingFee = 0.04;
+            } else if (firstId.equals("C")) {
+                this.tax = 0.1 * 0.95;
+                this.shippingFee = 0.03;
+            } else if (firstId.equals("D")) {
+                this.tax = 0.08 * 0.95;
+                this.shippingFee = 0.025;
+            } else if (firstId.equals("M")) {
+                this.tax = 0.02 * 0.95;
+                this.shippingFee = 0.005;
+            }
+        } else {
+            if (firstId.equals("T")) {
+                this.tax = 0.29;
+                this.shippingFee = 0.04;
+            } else if (firstId.equals("C")) {
+                this.tax = 0.1;
+                this.shippingFee = 0.03;
+            } else if (firstId.equals("D")) {
+                this.tax = 0.08;
+                this.shippingFee = 0.025;
+            } else if (firstId.equals("M")) {
+                this.tax = 0.02;
+                this.shippingFee = 0.005;
             }
         }
     }
