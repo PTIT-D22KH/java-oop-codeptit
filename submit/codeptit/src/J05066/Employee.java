@@ -44,9 +44,10 @@ public class Employee {
     }
 
     
-    public String getRole() {
-        return role;
+    public String getName(){
+        return name;
     }
+
     public String getCoefficient() {
         return coefficient;
     }

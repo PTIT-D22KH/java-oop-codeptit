@@ -14,9 +14,9 @@ public class J05066 {
         int q = Integer.parseInt(input.nextLine());
         for (int i = 0; i < q; i++) {
 
-            String role = input.nextLine();
+            String name = input.nextLine().toLowerCase();
             for (Employee x : a) {
-                if (x.getRole().equals(role)) {
+                if (x.getName().toLowerCase().contains(name)) {
                     System.out.println(x);
                 }
             }
