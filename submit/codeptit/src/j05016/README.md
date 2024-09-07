@@ -1,17 +1,13 @@
+
+## j05016
 ## ./j05016
 ![alt text](image.png)
 
-- [CompareByTotalCost.class](CompareByTotalCost.class)
-- [Customer.class](Customer.class)
 - [Customer.java](Customer.java)
-- [HotelInfo.class](HotelInfo.class)
 - [HotelInfo.java](HotelInfo.java)
 - [input.txt](input.txt)
-- [j05016.class](j05016.class)
 - [j05016.java](j05016.java)
 - [j05016.mdj](j05016.mdj)
 - [Main.jpg](Main.jpg)
-- [MyDate.class](MyDate.class)
-- [MyDate.java](MyDate.java)
 - [output.txt](output.txt)
 - [README.md](README.md)
