@@ -9,9 +9,21 @@ public class J05066 {
         ArrayList<Employee> a = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            a.add(new Employee(input.nextLine().trim()));
+            String id = input.next().trim();
+            String name = input.nextLine().trim();
+            Employee emp = new Employee(id, name);
+            if (emp.getRole().equals("TP") && emp.getStt() > 3) {
+                emp.setId("NV" + id.substring(2));
+            } else if (emp.getRole().equals("PP") && emp.getStt() > 3) {
+                emp.setId("NV" + id.substring(2));
+            } else if (emp.getRole().equals("GD") && emp.getStt() > 1) {
+                emp.setId("NV" + id.substring(2));
+            }
+            a.add(emp);
         }
+
         Collections.sort(a, new CompareByCoefficientAndStt());
+
         int q = Integer.parseInt(input.nextLine().trim());
         for (int i = 0; i < q; i++) {
             String name = input.nextLine().trim().toLowerCase();
