@@ -13,9 +13,8 @@ public class J07060 {
         Scanner input3 = new Scanner(new File("LICHTHI.in"));
 
         int n = Integer.parseInt(input1.nextLine().trim());
-        ArrayList<Course> courses = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            courses.add(new Course(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim()));
+            new Course(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim());
         }
 
         int m = Integer.parseInt(input2.nextLine().trim());
@@ -25,10 +24,9 @@ public class J07060 {
         }
 
         int p = Integer.parseInt(input3.nextLine().trim());
-        ArrayList<Schedule> schedules = new ArrayList<>();
         for (int i = 0; i < p; i++) {
-            schedules.add(new Schedule(input3.nextLine().trim()));
-            sections.get(i).setSchedule(schedules.get(i));
+            Schedule schedule = new Schedule(input3.nextLine().trim());
+            sections.get(i).setSchedule(schedule);
         }
 
         Collections.sort(sections, new CompareByDateAndId());
