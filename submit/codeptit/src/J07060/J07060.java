@@ -12,28 +12,29 @@ public class J07060 {
         Scanner input2 = new Scanner(new File("CATHI.in"));
         Scanner input3 = new Scanner(new File("LICHTHI.in"));
 
-        int n = Integer.parseInt(input1.nextLine());
-        ArrayList<Course> a = new ArrayList<>();
+        int n = Integer.parseInt(input1.nextLine().trim());
+        ArrayList<Course> courses = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            a.add(new Course(input1.nextLine(), input1.nextLine(), input1.nextLine()));
+            courses.add(new Course(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim()));
+        }
 
-        }
-        int m = Integer.parseInt(input2.nextLine());
-        ArrayList<Section> b = new ArrayList<>();
+        int m = Integer.parseInt(input2.nextLine().trim());
+        ArrayList<Section> sections = new ArrayList<>();
         for (int i = 0; i < m; i++) {
-            b.add(new Section(input2.nextLine(), input2.nextLine(), input2.nextLine()));
+            sections.add(new Section(input2.nextLine().trim(), input2.nextLine().trim(), input2.nextLine().trim()));
         }
-        int p = Integer.parseInt(input3.nextLine());
-        ArrayList<Schedule> c = new ArrayList<>();
+
+        int p = Integer.parseInt(input3.nextLine().trim());
+        ArrayList<Schedule> schedules = new ArrayList<>();
         for (int i = 0; i < p; i++) {
-            c.add(new Schedule(input3.nextLine()));
-            b.get(i).setSchedule(c.get(i));
+            schedules.add(new Schedule(input3.nextLine().trim()));
+            sections.get(i).setSchedule(schedules.get(i));
         }
-        Collections.sort(b, new CompareByDateAndId());
-        for (Section x : b) {
+
+        Collections.sort(sections, new CompareByDateAndId());
+        for (Section x : sections) {
             System.out.println(x);
         }
-
 
         input1.close();
         input2.close();
