@@ -16,6 +16,11 @@ public class HotelRoom {
     public static Map<String, HotelRoom> getHotelRoomMap() {
         return hotelRoomMap;
     }
-    
+    public double getServiceFee() {
+        return serviceFee;
+    }
+    public long getSinglePrice() {
+        return singlePrice;
+    }
 
 }
