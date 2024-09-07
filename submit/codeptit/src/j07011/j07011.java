@@ -18,7 +18,7 @@ public class j07011 {
         Map<String, Integer> mp = new TreeMap<>();
         for (int i = 0; i < n; i++ ){
             String s = input.nextLine();
-            String a[] = s.split("[,\\.?\\!:\\;\\(-\\/\\s]");
+            String a[] = s.split("\\W");
             for (int j = 0; j < a.length; j++) {
                 String temp = a[j].toLowerCase();
                 // System.out.println(temp);
