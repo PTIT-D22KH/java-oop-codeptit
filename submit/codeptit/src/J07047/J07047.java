@@ -4,7 +4,8 @@ import java.io.*;
 public class J07047 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07047/DATA.in"));
+        // Scanner input = new Scanner(new File("J07047/DATA.in"));
+        Scanner input = new Scanner(new File("DATA.in"));
 
         int n = Integer.parseInt(input.nextLine());
         ArrayList<HotelRoom> a = new ArrayList<>();
