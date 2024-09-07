@@ -11,9 +11,10 @@ public class J05059 {
         }
         Collections.sort(a, new CompareByTotalScoreAndId());
         int m = Integer.parseInt(input.nextLine());
-        System.out.printf("%.1f\n" , a.get(m - 1).getTotalScore());
+        double score = a.get(m - 1).getTotalScore();
+        System.out.printf("%.1f\n" , score);
         for (int i = 0; i < n; i++) {
-            if (i < m) {
+            if (a.get(i).getTotalScore() >= score) {
                 System.out.println(a.get(i) + " TRUNG TUYEN");
             } else {
                 System.out.println(a.get(i) + " TRUOT");
