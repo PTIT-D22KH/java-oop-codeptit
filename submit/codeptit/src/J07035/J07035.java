@@ -12,27 +12,27 @@ public class J07035 {
         Scanner input2 = new Scanner(new File("MONHOC.in"));
         Scanner input3 = new Scanner(new File("BANGDIEM.in"));
 
-        int n = Integer.parseInt(input2.nextLine());
+        int n = Integer.parseInt(input1.nextLine().trim());
         for (int i = 0; i < n; i++) {
-            new Course(input2.nextLine(), input2.nextLine(), Integer.parseInt(input2.nextLine()));
+            new Student(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim());
         }
 
-        int m = Integer.parseInt(input1.nextLine());
+        int m = Integer.parseInt(input2.nextLine().trim());
         for (int i = 0; i < m; i++) {
-            new Student(input1.nextLine(), input1.nextLine(), input1.nextLine(), input1.nextLine());
+            new Course(input2.nextLine().trim(), input2.nextLine().trim(), Integer.parseInt(input2.nextLine().trim()));
         }
 
-        int p = Integer.parseInt(input3.nextLine());
+        int p = Integer.parseInt(input3.nextLine().trim());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for (int i = 0; i < p; i++) {
-            transcripts.add(new Transcript(input3.nextLine()));
+            transcripts.add(new Transcript(input3.nextLine().trim()));
         }
 
         Collections.sort(transcripts, new CompareByGpaAndId());
 
-        int k = Integer.parseInt(input3.nextLine());
+        int k = Integer.parseInt(input3.nextLine().trim());
         for (int i = 0; i < k; i++) {
-            String courseId = input3.nextLine();
+            String courseId = input3.nextLine().trim();
             System.out.printf("BANG DIEM MON %s:\n", Course.getCourseMap().get(courseId).getName());
             for (Transcript x : transcripts) {
                 if (x.getCourse().getId().equals(courseId)) {
