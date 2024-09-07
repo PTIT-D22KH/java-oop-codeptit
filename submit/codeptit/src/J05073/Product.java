@@ -14,6 +14,8 @@ public class Product {
     }
 
     private preSetTaxAndShippingFee() {
-        
+        if (firstId.equals("T")) {
+            
+        }
     }
 }
