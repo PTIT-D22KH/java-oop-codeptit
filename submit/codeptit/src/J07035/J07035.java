@@ -13,21 +13,23 @@ public class J07035 {
         Scanner input3 = new Scanner(new File("BANGDIEM.in"));
 
         int n = Integer.parseInt(input2.nextLine());
-        ArrayList<Course> courses = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            courses.add(new Course(input2.nextLine(), input2.nextLine(), Integer.parseInt(input2.nextLine())));
+            new Course(input2.nextLine(), input2.nextLine(), Integer.parseInt(input2.nextLine()));
         }
-        int m = Integer.parseInt(input1.nextLine()) ;
-        ArrayList<Student> students = new ArrayList<>();
+
+        int m = Integer.parseInt(input1.nextLine());
         for (int i = 0; i < m; i++) {
-            students.add(new Student(input1.nextLine(), input1.nextLine(), input1.nextLine(), input1.nextLine()));
+            new Student(input1.nextLine(), input1.nextLine(), input1.nextLine(), input1.nextLine());
         }
+
         int p = Integer.parseInt(input3.nextLine());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for (int i = 0; i < p; i++) {
             transcripts.add(new Transcript(input3.nextLine()));
         }
+
         Collections.sort(transcripts, new CompareByGpaAndId());
+
         int k = Integer.parseInt(input3.nextLine());
         for (int i = 0; i < k; i++) {
             String courseId = input3.nextLine();
@@ -38,7 +40,6 @@ public class J07035 {
                 }
             }
         }
-
 
         input1.close();
         input2.close();
