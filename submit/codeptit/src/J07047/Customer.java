@@ -5,7 +5,7 @@ public class Customer {
     private String id, name, roomId;
     private HotelRoom room;
     private Date checkInDate, checkOutDate;
-
+    private long numDays;
     public Customer(String name, String roomId, String checkInDate, String checkOutDate) {
         this.name = name;
         this.roomId = roomId;

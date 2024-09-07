@@ -5,34 +5,22 @@ import java.util.*;
 public class J05066 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n = Integer.parseInt(input.nextLine());
-        ArrayList<Employee> employees = new ArrayList<>();
+        int n = Integer.parseInt(input.nextLine().trim());
+        ArrayList<Employee> a = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            employees.add(new Employee(input.next(), input.nextLine().trim()));
+            a.add(new Employee(input.nextLine().trim()));
         }
-
-        // Correct role assignment based on constraints
-        for (Employee emp : employees) {
-            emp.correctRole();
-        }
-
-        // Sort employees by coefficient in descending order and by stt in ascending order if coefficients are equal
-        Collections.sort(employees, new CompareByCoefficientAndStt());
-
-        int q = Integer.parseInt(input.nextLine());
+        Collections.sort(a, new CompareByCoefficientAndStt());
+        int q = Integer.parseInt(input.nextLine().trim());
         for (int i = 0; i < q; i++) {
-            String keyword = input.nextLine().toLowerCase();
-            boolean found = false;
-            for (Employee emp : employees) {
-                if (emp.getName().toLowerCase().contains(keyword)) {
-                    System.out.println(emp);
-                    found = true;
+            String name = input.nextLine().trim().toLowerCase();
+            for (Employee x : a) {
+                if (x.getName().toLowerCase().contains(name)) {
+                    System.out.println(x);
                 }
             }
-            if (found) {
-                System.out.println();
-            }
+            System.out.println();
         }
         input.close();
     }
