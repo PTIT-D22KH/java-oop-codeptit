@@ -10,14 +10,17 @@ public class Word {
         this.word = word;
         this.fre = fre;
     }
+
     public int getFre() {
         return fre;
     }
+
     @Override
     public String toString() {
         return word + " " + fre;
     }
 }
+
 class CompareByFre implements Comparator<Word> {
     @Override
     public int compare(Word a, Word b) {
