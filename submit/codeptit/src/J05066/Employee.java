@@ -6,17 +6,12 @@ public class Employee {
     private String id, name, role, stt, coefficient;
     private static int countGD = 0, countTP = 0, countPP = 0;
 
-    public Employee(String s) {
-        String[] a = s.trim().split("\\s+");
-        this.id = a[0];
-        StringBuilder nameBuilder = new StringBuilder();
-        for (int i = 1; i < a.length; i++) {
-            nameBuilder.append(a[i]).append(" ");
-        }
-        this.name = nameBuilder.toString().trim();
-        this.stt = this.id.substring(4);
-        this.coefficient = this.id.substring(2, 4);
-        this.role = this.id.substring(0, 2);
+    public Employee(String id, String name) {
+        this.id = id;
+        this.name = name;
+        this.role = id.substring(0, 2);
+        this.coefficient = id.substring(2, 4);
+        this.stt = id.substring(4, 7);
     }
 
     public void correctRole() {
@@ -66,7 +61,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return name + " " + role + " " + String.format("%03d", Integer.parseInt(stt)) + " " + coefficient;
+        return name + " " + role + " " + stt + " " + coefficient;
     }
 }
 

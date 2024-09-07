@@ -9,7 +9,7 @@ public class J05066 {
         ArrayList<Employee> employees = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            employees.add(new Employee(input.nextLine()));
+            employees.add(new Employee(input.next(), input.nextLine().trim()));
         }
 
         // Correct role assignment based on constraints

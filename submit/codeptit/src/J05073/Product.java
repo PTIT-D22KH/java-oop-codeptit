@@ -13,4 +13,7 @@ public class Product {
         preSetTaxAndShippingFee();
     }
 
+    private preSetTaxAndShippingFee() {
+        
+    }
 }
