@@ -31,6 +31,7 @@ public class J07035 {
         int k = Integer.parseInt(input3.nextLine());
         for (int i = 0; i < k; i++) {
             String courseId = input3.nextLine();
+            System.out.printf("BANG DIEM MON %s:\n", Course.getCourseMap().get(courseId).getName());
             for (Transcript x : transcripts) {
                 if (x.getCourse().getId().equals(courseId)) {
                     System.out.println(x);
