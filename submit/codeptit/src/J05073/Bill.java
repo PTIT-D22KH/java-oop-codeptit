@@ -7,6 +7,8 @@ public class Bill {
 
     public Bill(String s) {
         String a[] = s.trim().split("\\s+");
-        
+        this.id = a[0];
+        long singlePrice = Long.parseLong(a[1]);
+        this.numBuy = Long.parseLong(a[2]);
     }
 }
