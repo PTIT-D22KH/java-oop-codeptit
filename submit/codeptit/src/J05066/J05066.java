@@ -11,6 +11,13 @@ public class J05066 {
         for (int i = 0; i < n; i++) {
             employees.add(new Employee(input.nextLine()));
         }
+
+        // Correct role assignment based on constraints
+        for (Employee emp : employees) {
+            emp.correctRole();
+        }
+
+        // Sort employees by coefficient in descending order and by stt in ascending order if coefficients are equal
         Collections.sort(employees, new CompareByCoefficientAndStt());
 
         int q = Integer.parseInt(input.nextLine());

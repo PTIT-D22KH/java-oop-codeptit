@@ -16,31 +16,39 @@ public class Employee {
         this.name = nameBuilder.toString().trim();
         this.stt = this.id.substring(4);
         this.coefficient = this.id.substring(2, 4);
-        this.role = calRole(this.id.substring(0, 2));
+        this.role = this.id.substring(0, 2);
     }
 
-    private String calRole(String role) {
-        switch (role) {
+    public void correctRole() {
+        switch (this.role) {
             case "GD":
                 if (countGD < 1) {
                     countGD++;
-                    return role;
+                } else {
+                    this.role = "NV";
+                    this.id = "NV" + this.id.substring(2);
                 }
-                return "NV";
+                break;
             case "TP":
                 if (countTP < 3) {
                     countTP++;
-                    return role;
+                } else {
+                    this.role = "NV";
+                    this.id = "NV" + this.id.substring(2);
                 }
-                return "NV";
+                break;
             case "PP":
                 if (countPP < 3) {
                     countPP++;
-                    return role;
+                } else {
+                    this.role = "NV";
+                    this.id = "NV" + this.id.substring(2);
                 }
-                return "NV";
+                break;
             default:
-                return "NV";
+                this.role = "NV";
+                this.id = "NV" + this.id.substring(2);
+                break;
         }
     }
 
@@ -58,7 +66,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return name + " " + role + " " + stt + " " + coefficient;
+        return name + " " + role + " " + String.format("%03d", Integer.parseInt(stt)) + " " + coefficient;
     }
 }
 
