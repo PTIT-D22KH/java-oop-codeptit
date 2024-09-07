@@ -26,7 +26,7 @@ public class j07028 {
         }
         input.close();
         // input = new Scanner(new File("j07028/GIANGVIEN.in"));
-        input = new Scanner(new File("GIANGVIENC.in"));
+        input = new Scanner(new File("GIANGVIEN.in"));
         n = Integer.parseInt(input.nextLine());
         ArrayList<Lecturer> lecturers = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
