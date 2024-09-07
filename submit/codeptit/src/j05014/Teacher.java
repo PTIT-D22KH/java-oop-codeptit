@@ -44,6 +44,9 @@ public class Teacher {
     public double getTotalScore() {
         return totalScore;
     }
+    public String getId() {
+        return id;
+    }
     @Override
     public String toString() {
         return id + " " + name + " " + subject + String.format(" %.1f ", totalScore) + result;
@@ -53,9 +56,10 @@ public class Teacher {
 class CompareByTotalScore implements Comparator<Teacher> {
     @Override
     public int compare(Teacher o1, Teacher o2) {
-        if (o1.getTotalScore() < o2.getTotalScore()) {
-            return 1;
+        int cmpTotalScore = Double.compare(o2.getTotalScore(), o1.getTotalScore());
+        if (cmpTotalScore == 0) {
+            return o1.getId().compareTo(o2.getId());
         }
-        return -1;
+        return cmpTotalScore;
     }
 }
