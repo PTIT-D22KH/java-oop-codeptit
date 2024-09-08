@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Student {
     private String id, name, className, email;
-    // private static Map<String, Student> studentMap = new HashMap<>();
+    private static Map<String, Student> studentMap = new HashMap<>();
 
     public Student() {
     }
@@ -14,11 +14,12 @@ public class Student {
         this.name = formatName(name);
         this.className = className;
         this.email = email;
+        studentMap.put(id, this);
     }
 
-    // public static Map<String, Student> getStudentMap() {
-    //     return studentMap;
-    // }
+    public static Map<String, Student> getStudentMap() {
+        return studentMap;
+    }
 
     public String getClassName() {
         return className;
