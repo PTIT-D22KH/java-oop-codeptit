@@ -6,6 +6,10 @@ public class Student {
     private String id, name, className, email;
     private static Map<String, Student> studentMap = new HashMap<>();
 
+
+    public Student() {
+        
+    }
     public Student(String id, String name, String className, String email) {
         this.id = id;
         this.name = formatName(name);
@@ -31,7 +35,6 @@ public class Student {
     }
 
     private String formatName(String name) {
-        name = name.toLowerCase();
         String[] words = name.trim().toLowerCase().split("\\s+");
         StringBuilder res = new StringBuilder();
         for (String word : words) {

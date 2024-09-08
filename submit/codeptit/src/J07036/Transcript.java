@@ -3,22 +3,30 @@ package J07036;
 import java.util.*;
 
 public class Transcript {
-    private Course course;
     private Student student;
-    private double gpa;
+    private Course course;
+    
+    private String gpa;
 
     public Transcript(String s) {
         String[] a = s.trim().split("\\s+");
         this.student = Student.getStudentMap().get(a[0]);
         this.course = Course.getCourseMap().get(a[1]);
-        this.gpa = Double.parseDouble(a[2]);
+        this.gpa = a[2];
+    }
+
+
+    public Transcript(Student student, Course course, String gpa) {
+        this.student = student;
+        this.course = course;
+        this.gpa = gpa;
     }
 
     public Course getCourse() {
         return course;
     }
 
-    public double getGpa() {
+    public String getGpa() {
         return gpa;
     }
 
@@ -28,7 +36,7 @@ public class Transcript {
 
     @Override
     public String toString() {
-        return student.getId() + " " + student.getName() + " " + course.getName() + " " + String.format("%.2f", gpa);
+        return student.getId() + " " + student.getName() + " " + student.getClassName() + " " + gpa;
     }
 }
 
