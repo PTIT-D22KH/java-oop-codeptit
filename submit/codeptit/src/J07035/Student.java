@@ -42,4 +42,9 @@ public class Student {
         }
         return res.toString().trim();
     }
+
+    @Override
+    public String toString() {
+        return id + " " + name + " " + className;
+    }
 }

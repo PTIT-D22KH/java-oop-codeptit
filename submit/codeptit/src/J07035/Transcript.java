@@ -47,7 +47,7 @@ public class Transcript {
 
     @Override
     public String toString() {
-        return student.getId() + " " + student.getName() + " " + student.getClassName() + " " + gpa;
+        return student + " " + gpa;
     }
 }
 
