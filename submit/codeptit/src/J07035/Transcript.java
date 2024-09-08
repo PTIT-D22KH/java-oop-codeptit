@@ -3,22 +3,41 @@ package J07035;
 import java.util.*;
 
 public class Transcript {
-    private Course course;
     private Student student;
-    private double gpa;
+    private Course course;
+    
+    private String gpa;
 
     public Transcript(String s) {
         String[] a = s.trim().split("\\s+");
         this.student = Student.getStudentMap().get(a[0]);
         this.course = Course.getCourseMap().get(a[1]);
-        this.gpa = Double.parseDouble(a[2]);
+        this.gpa = a[2];
     }
+    
+    
+
+    
+
+
+
+    public Transcript(Student student, Course course, String gpa) {
+        this.student = student;
+        this.course = course;
+        this.gpa = gpa;
+    }
+
+
+
+
+
+
 
     public Course getCourse() {
         return course;
     }
 
-    public double getGpa() {
+    public String getGpa() {
         return gpa;
     }
 
@@ -28,14 +47,14 @@ public class Transcript {
 
     @Override
     public String toString() {
-        return student.getId() + " " + student.getName() + " " + student.getClassName() + " " + String.format("%.1f", gpa);
+        return student.getId() + " " + student.getName() + " " + student.getClassName() + " " + gpa;
     }
 }
 
 class CompareByGpaAndId implements Comparator<Transcript> {
     @Override
     public int compare(Transcript a, Transcript b) {
-        int cmpGpa = Double.compare(b.getGpa(), a.getGpa());
+        int cmpGpa = b.getGpa().compareTo(a.getGpa());
         if (cmpGpa == 0) {
             return a.getStudent().getId().compareTo(b.getStudent().getId());
         }

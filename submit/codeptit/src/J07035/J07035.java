@@ -13,26 +13,47 @@ public class J07035 {
         Scanner input3 = new Scanner(new File("BANGDIEM.in"));
 
         int n = Integer.parseInt(input1.nextLine().trim());
+        ArrayList<Student> students = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            new Student(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim());
+            students.add(new Student(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim()));
         }
 
         int m = Integer.parseInt(input2.nextLine().trim());
+        ArrayList<Course> courses = new ArrayList<>();
         for (int i = 0; i < m; i++) {
-            new Course(input2.nextLine().trim(), input2.nextLine().trim(), Integer.parseInt(input2.nextLine().trim()));
+            courses.add(new Course(input2.nextLine().trim(), input2.nextLine().trim(), Integer.parseInt(input2.nextLine().trim())));
         }
 
         int p = Integer.parseInt(input3.nextLine().trim());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for (int i = 0; i < p; i++) {
-            transcripts.add(new Transcript(input3.nextLine().trim()));
+            String studentId = input3.next();
+            String courseId = input3.next();
+            String gpa = input3.next();
+            Student student = new Student();
+            Course course = new Course();
+
+            for (Student st : students) {
+                if (st.getId().equals(studentId)) {
+                    student = st;
+                    break;
+                }
+            } 
+            for (Course sj : courses) {
+                if (sj.getId().equals(courseId)) {
+                    course = sj;
+                    break;
+                }
+            }
+            transcripts.add(new Transcript(student, course, gpa));
+            // transcripts.add(new Transcript(input3.nextLine().trim()));
         }
 
         Collections.sort(transcripts, new CompareByGpaAndId());
 
-        int k = Integer.parseInt(input3.nextLine().trim());
+        int k = Integer.parseInt(input3.next());
         for (int i = 0; i < k; i++) {
-            String courseId = input3.nextLine().trim();
+            String courseId = input3.next();
             System.out.printf("BANG DIEM MON %s:\n", Course.getCourseMap().get(courseId).getName());
             for (Transcript x : transcripts) {
                 if (x.getCourse().getId().equals(courseId)) {
