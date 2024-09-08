@@ -8,9 +8,9 @@ public class J07035 {
         // Scanner input2 = new Scanner(new File("J07035/MONHOC.in"));
         // Scanner input3 = new Scanner(new File("J07035/BANGDIEM.in"));
 
-        // Scanner input1 = new Scanner(new File("SINHVIEN.in"));
-        // Scanner input2 = new Scanner(new File("MONHOC.in"));
-        // Scanner input3 = new Scanner(new File("BANGDIEM.in"));
+        Scanner input1 = new Scanner(new File("SINHVIEN.in"));
+        Scanner input2 = new Scanner(new File("MONHOC.in"));
+        Scanner input3 = new Scanner(new File("BANGDIEM.in"));
 
         int n = Integer.parseInt(input2.nextLine());
         ArrayList<Course> courses = new ArrayList<>();
