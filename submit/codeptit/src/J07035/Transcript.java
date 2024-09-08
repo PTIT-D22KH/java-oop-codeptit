@@ -7,12 +7,12 @@ public class Transcript {
     private Course course;
     private String gpa;
 
-    public Transcript(String s) {
-        String[] a = s.trim().split("\\s+");
-        this.student = Student.getStudentMap().get(a[0]);
-        this.course = Course.getCourseMap().get(a[1]);
-        this.gpa = a[2];
-    }
+    // public Transcript(String s) {
+    //     String[] a = s.trim().split("\\s+");
+    //     this.student = Student.getStudentMap().get(a[0]);
+    //     this.course = Course.getCourseMap().get(a[1]);
+    //     this.gpa = a[2];
+    // }
 
     public Transcript(Student student, Course course, String gpa) {
         this.student = student;
