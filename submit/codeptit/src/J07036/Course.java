@@ -28,4 +28,8 @@ public class Course {
     public String getName() {
         return name;
     }
+    @Override
+    public String toString (){
+        return id + " " + name;
+    }
 }

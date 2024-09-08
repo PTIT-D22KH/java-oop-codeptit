@@ -36,12 +36,17 @@ public class J07036 {
             for (Student st : students) {
                 if (st.getId().equals(studentId)) {
                     student = st;
+                    
+                    // System.out.println("found");
+                    // System.out.println(student);
                     break;
                 }
             } 
             for (Course sj : courses) {
                 if (sj.getId().equals(courseId)) {
                     course = sj;
+                    // System.out.println("found");
+                    // System.out.println(course);
                     break;
                 }
             }
@@ -60,6 +65,9 @@ public class J07036 {
                     System.out.println(x);
                 }
             }
+            // for (Transcript x : transcripts) {
+            //     System.out.println(x);
+            // }
         }
 
         input1.close();
