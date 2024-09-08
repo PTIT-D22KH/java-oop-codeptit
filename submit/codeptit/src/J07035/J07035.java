@@ -38,7 +38,7 @@ public class J07035 {
                     student = st;
                     break;
                 }
-            } 
+            }
             for (Course sj : courses) {
                 if (sj.getId().equals(courseId)) {
                     course = sj;
@@ -46,7 +46,6 @@ public class J07035 {
                 }
             }
             transcripts.add(new Transcript(student, course, gpa));
-            // transcripts.add(new Transcript(input3.nextLine().trim()));
         }
 
         Collections.sort(transcripts, new CompareByGpaAndId());

@@ -8,8 +8,8 @@ public class Course {
     private static Map<String, Course> courseMap = new HashMap<>();
 
     public Course() {
-        
     }
+
     public Course(String id, String name, int numOfCredits) {
         this.id = id;
         this.name = name;

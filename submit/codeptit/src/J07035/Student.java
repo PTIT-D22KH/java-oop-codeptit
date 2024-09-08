@@ -6,10 +6,9 @@ public class Student {
     private String id, name, className, email;
     private static Map<String, Student> studentMap = new HashMap<>();
 
-
     public Student() {
-        
     }
+
     public Student(String id, String name, String className, String email) {
         this.id = id;
         this.name = formatName(name);

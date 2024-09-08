@@ -5,7 +5,6 @@ import java.util.*;
 public class Transcript {
     private Student student;
     private Course course;
-    
     private String gpa;
 
     public Transcript(String s) {
@@ -14,24 +13,12 @@ public class Transcript {
         this.course = Course.getCourseMap().get(a[1]);
         this.gpa = a[2];
     }
-    
-    
-
-    
-
-
 
     public Transcript(Student student, Course course, String gpa) {
         this.student = student;
         this.course = course;
         this.gpa = gpa;
     }
-
-
-
-
-
-
 
     public Course getCourse() {
         return course;
