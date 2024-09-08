@@ -54,7 +54,14 @@ public class J07035 {
         int k = Integer.parseInt(input3.next());
         for (int i = 0; i < k; i++) {
             String courseId = input3.next();
-            System.out.printf("BANG DIEM MON %s:\n", Course.getCourseMap().get(courseId).getName());
+            String courseName = "";
+            for (Course cs : courses) {
+                if (cs.getId().equals(courseId)) {
+                    courseName = cs.getName();
+                    break;
+                }
+            }
+            System.out.printf("BANG DIEM MON %s:\n", courseName);
             for (Transcript x : transcripts) {
                 if (x.getCourse().getId().equals(courseId)) {
                     System.out.println(x);
