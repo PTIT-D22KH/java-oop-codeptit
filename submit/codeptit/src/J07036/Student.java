@@ -32,7 +32,7 @@ public class Student {
 
     private String formatName(String name) {
         name = name.toLowerCase();
-        String[] words = name.trim().split("\\s+");
+        String[] words = name.trim().toLowerCase().split("\\s+");
         StringBuilder res = new StringBuilder();
         for (String word : words) {
             res.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(" ");

@@ -4,13 +4,13 @@ import java.io.*;
 public class J07035 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input1 = new Scanner(new File("J07035/SINHVIEN.in"));
-        Scanner input2 = new Scanner(new File("J07035/MONHOC.in"));
-        Scanner input3 = new Scanner(new File("J07035/BANGDIEM.in"));
+        // Scanner input1 = new Scanner(new File("J07035/SINHVIEN.in"));
+        // Scanner input2 = new Scanner(new File("J07035/MONHOC.in"));
+        // Scanner input3 = new Scanner(new File("J07035/BANGDIEM.in"));
 
-        // Scanner input1 = new Scanner(new File("SINHVIEN.in"));
-        // Scanner input2 = new Scanner(new File("MONHOC.in"));
-        // Scanner input3 = new Scanner(new File("BANGDIEM.in"));
+        Scanner input1 = new Scanner(new File("SINHVIEN.in"));
+        Scanner input2 = new Scanner(new File("MONHOC.in"));
+        Scanner input3 = new Scanner(new File("BANGDIEM.in"));
 
         int n = Integer.parseInt(input1.nextLine().trim());
         for (int i = 0; i < n; i++) {
