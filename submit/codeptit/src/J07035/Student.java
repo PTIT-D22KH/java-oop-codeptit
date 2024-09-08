@@ -31,7 +31,6 @@ public class Student {
     }
 
     private String formatName(String name) {
-        name = name.toLowerCase();
         String[] words = name.trim().toLowerCase().split("\\s+");
         StringBuilder res = new StringBuilder();
         for (String word : words) {
