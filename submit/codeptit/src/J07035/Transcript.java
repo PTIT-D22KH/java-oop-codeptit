@@ -41,7 +41,7 @@ public class Transcript {
 class CompareByGpaAndId implements Comparator<Transcript> {
     @Override
     public int compare(Transcript a, Transcript b) {
-        int cmpGpa = b.getGpa().compareTo(a.getGpa());
+        int cmpGpa = Double.valueOf(b.getGpa()).compareTo(Double.valueOf(a.getGpa()));
         if (cmpGpa == 0) {
             return a.getStudent().getId().compareTo(b.getStudent().getId());
         }
