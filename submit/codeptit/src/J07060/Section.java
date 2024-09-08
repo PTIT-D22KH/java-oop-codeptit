@@ -4,7 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Section {
-    private String day, hour, roomId;
+    private String id, day, hour, roomId;
+    private static int count = 0;
     private Date date;
     private SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy HH:mm");
     private Schedule schedule;
@@ -19,11 +20,14 @@ public class Section {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        count++;
+        this.id = String.format("C%03d", count);
+        this.schedule = Schedule.getScheduleMap().get(this.id);
     }
 
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }
+    // public void setSchedule(String id) {
+    //     this.schedule = Schedule.getScheduleMap().get(id);
+    // }
 
     public Date getDate() {
         return date;

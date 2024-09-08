@@ -17,16 +17,19 @@ public class J07060 {
             new Course(input1.nextLine().trim(), input1.nextLine().trim(), input1.nextLine().trim());
         }
 
+        
+
+        int p = Integer.parseInt(input3.nextLine().trim());
+        ArrayList<Schedule> schedules = new ArrayList<>();
+        for (int i = 0; i < p; i++) {
+            Schedule schedule = new Schedule(input3.nextLine().trim());
+            schedules.add(schedule);
+        }
+
         int m = Integer.parseInt(input2.nextLine().trim());
         ArrayList<Section> sections = new ArrayList<>();
         for (int i = 0; i < m; i++) {
             sections.add(new Section(input2.nextLine().trim(), input2.nextLine().trim(), input2.nextLine().trim()));
-        }
-
-        int p = Integer.parseInt(input3.nextLine().trim());
-        for (int i = 0; i < p; i++) {
-            Schedule schedule = new Schedule(input3.nextLine().trim());
-            sections.get(i).setSchedule(schedule);
         }
 
         Collections.sort(sections, new CompareByDateAndId());
