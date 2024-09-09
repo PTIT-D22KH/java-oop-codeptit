@@ -64,7 +64,7 @@ public class DaThuc {
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < polynomial.size(); i++) {
             Variable x = polynomial.get(i);
-            res.append(x.getCoefficient()).append("*x^").append(x.getPower());
+            res.append(x);
             if (i != polynomial.size() - 1) {
                 res.append(" + ");
             }

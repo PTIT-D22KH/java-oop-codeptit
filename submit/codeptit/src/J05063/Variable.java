@@ -13,6 +13,10 @@ public class Variable {
     public int getCoefficient() {
         return coefficient;
     }
+    @Override 
+    public String toString (){ 
+        return coefficient + "*x^"+ power;
+    }
 
     
 }
