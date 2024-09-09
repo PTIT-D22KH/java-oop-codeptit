@@ -24,34 +24,40 @@ public class J07036 {
             courses.add(new Course(input2.nextLine().trim(), input2.nextLine().trim(), Integer.parseInt(input2.nextLine().trim())));
         }
 
-        int p = Integer.parseInt(input3.nextLine().trim());
+        // int p = Integer.parseInt(input3.nextLine().trim());
+        // ArrayList<Transcript> transcripts = new ArrayList<>();
+        // for (int i = 0; i < p; i++) {
+        //     String studentId = input3.next();
+        //     String courseId = input3.next();
+        //     String gpa = input3.next();
+        //     Student student = new Student();
+        //     Course course = new Course();
+
+        //     for (Student st : students) {
+        //         if (st.getId().equals(studentId)) {
+        //             student = st;
+                    
+        //             // System.out.println("found");
+        //             // System.out.println(student);
+        //             break;
+        //         }
+        //     } 
+        //     for (Course sj : courses) {
+        //         if (sj.getId().equals(courseId)) {
+        //             course = sj;
+        //             // System.out.println("found");
+        //             // System.out.println(course);
+        //             break;
+        //         }
+        //     }
+        //     transcripts.add(new Transcript(student, course, gpa));
+        //     // transcripts.add(new Transcript(input3.nextLine().trim()));
+        // }
+
+        int p = Integer.parseInt(input3.nextLine());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for (int i = 0; i < p; i++) {
-            String studentId = input3.next();
-            String courseId = input3.next();
-            String gpa = input3.next();
-            Student student = new Student();
-            Course course = new Course();
-
-            for (Student st : students) {
-                if (st.getId().equals(studentId)) {
-                    student = st;
-                    
-                    // System.out.println("found");
-                    // System.out.println(student);
-                    break;
-                }
-            } 
-            for (Course sj : courses) {
-                if (sj.getId().equals(courseId)) {
-                    course = sj;
-                    // System.out.println("found");
-                    // System.out.println(course);
-                    break;
-                }
-            }
-            transcripts.add(new Transcript(student, course, gpa));
-            // transcripts.add(new Transcript(input3.nextLine().trim()));
+            transcripts.add(new Transcript(input3.nextLine()));
         }
 
         Collections.sort(transcripts, new CompareByCourseIdAndStudentId());
