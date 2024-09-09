@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "submit/codeptit/src/j01001/j01001",
         "submit/codeptit/src/chello",
-        "submit/codeptit/src/basic/chello",
-        "submit/codeptit/src"
+        "submit/codeptit/src",
+        "classwork/classwork/src/week2/ArrayLearn",
+        "classwork/classwork/src/week2",
+        "classwork/classwork/src"
     ]
 }

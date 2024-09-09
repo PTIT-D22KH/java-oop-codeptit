@@ -1,0 +1,13 @@
+4
+GV01
+Nguyen Kim Loan
+1420000
+HT05
+Hoang Thanh Tuan
+1780000
+GV02
+Tran Binh Nguyen
+1468000
+HT05
+Vu Cong Tuan Duong
+5000000

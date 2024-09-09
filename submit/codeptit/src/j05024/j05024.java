@@ -31,14 +31,12 @@ public class j05024 {
             }
             System.out.printf("DANH SACH SINH VIEN NGANH %s:\n", major.toUpperCase());
             for (Student x : a) {
-                if (x.getId().substring(3,7).equals(s) && (s == "DCCN" || s == "DCAT") && x.getClassName().charAt(0) != 'E') {
-                    
-                    System.out.println(x);
-                } else if (x.getId().substring(3,7).equals(s)) {
+                if (x.getId().substring(3,7).equals(s) ) {
+                    if ((s == "DCCN" || s == "DCAT") && x.getClassName().charAt(0) == 'E') {
+                        continue;
+                    }
                     System.out.println(x);
                 }
-                // System.out.println(x.getClassName().substring(3,7));
-                // System.out.println(x);
             }
         }
         input.close();

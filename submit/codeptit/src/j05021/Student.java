@@ -26,9 +26,6 @@ public class Student {
 class CompareByClassNameAndId implements Comparator<Student> {
     @Override
     public int compare(Student a, Student b) {
-        if (a.getClassName().compareTo(b.getClassName()) == 0) {
-            return a.getId().compareTo(b.getId());
-        }
-        return a.getClassName().compareTo(b.getClassName());
+        return a.getId().compareTo(b.getId());
     }
 }

@@ -38,7 +38,7 @@ public class Customer {
         if (numUsed < 50) {
             return 0;
         } else if (numUsed <= 100) {
-            return Math.round(basicCost * 0.35);
+            return Math.ceil(basicCost * 0.35);
         } else {
             return basicCost;
         }
@@ -58,9 +58,6 @@ public class Customer {
 class CompareByTotalCost implements Comparator<Customer> {
     @Override
     public int compare(Customer a, Customer b) {
-        if (a.getTotalCost() < b.getTotalCost()) {
-            return 1;
-        }
-        return -1;
+        return Double.compare(b.getTotalCost(), a.getTotalCost());
     }
 }

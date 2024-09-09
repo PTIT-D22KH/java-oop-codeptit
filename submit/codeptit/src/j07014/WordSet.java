@@ -14,7 +14,8 @@ public class WordSet {
 
     }
     public WordSet(String fileName) throws FileNotFoundException {
-        String fullFileName = "j07014/" + fileName; 
+        // String fullFileName = "j07014/" + fileName; 
+        String fullFileName = fileName;
         Scanner input = new Scanner(new File(fullFileName));
         while (input.hasNextLine()) {
             String s = input.nextLine();

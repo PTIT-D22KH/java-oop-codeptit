@@ -19,7 +19,7 @@ public class Contestant {
     }
     private int calAge(String dob) {
         int year = Integer.parseInt(dob.substring(6));
-        return 2024 - year;
+        return 2021 - year;
     }
     private double calPriorityScore() {
         if (lt >= 8 && th >= 8) {

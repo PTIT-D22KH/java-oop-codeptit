@@ -27,15 +27,11 @@ public class Student {
 class CompareByNumTruesAndNumSubmit implements Comparator<Student> {
     @Override
     public int compare(Student a, Student b) {
-        if (a.getNumTrues() == b.getNumTrues()) {
-            if (a.getNumSubmits() > b.getNumSubmits()) {
-                return 1;
-            } 
-            return -1;
-        } else if (a.getNumTrues() < b.getNumTrues()) {
-            return 1;
-        } 
-        return -1;
+        int compareNumTrues = Long.compare(b.getNumTrues(), a.getNumTrues());
+        if (compareNumTrues == 0) {
+            return Long.compare(a.getNumSubmits(), b.getNumSubmits());
+        }
+        return compareNumTrues;
     
     }
 }

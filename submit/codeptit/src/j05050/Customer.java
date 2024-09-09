@@ -6,48 +6,52 @@ public class Customer {
 
     private static int count = 0;
 
-    public Customer(String type, double oldNum, double newNum)  {
+    public Customer(String type, double oldNum, double newNum) {
         this.type = type;
         this.numUsed = newNum - oldNum;
         count++;
         this.id = String.format("KH%02d", count);
-        this.coefficient = calCoefficient();
-        this.basicCost = calBasicCost();
-        this.extra = calExtra();
-        this.totalCost = calTotalCost();
+        this.coefficient = calculateCoefficient();
+        this.basicCost = calculateBasicCost();
+        this.extra = calculateExtra();
+        this.totalCost = calculateTotalCost();
     }
 
-    private double calCoefficient() {
-        if (type.equals("KD")) {
-            return 3;
-        } else if (type.equals("NN")) {
-            return 5;
-        } else if (type.equals("TT")) {
-            return 4;
-        } else if (type.equals("CN")) {
-            return 2;
+    private double calculateCoefficient() {
+        switch (type) {
+            case "KD":
+                return 3;
+            case "NN":
+                return 5;
+            case "TT":
+                return 4;
+            case "CN":
+                return 2;
+            default:
+                return 1;
         }
-        return 1;
     }
-    private double calBasicCost(){ 
+
+    private double calculateBasicCost() {
         return numUsed * coefficient * 550;
     }
-    private double calExtra() {
+
+    private double calculateExtra() {
         if (numUsed < 50) {
             return 0;
         } else if (numUsed <= 100) {
-            return Math.round(basicCost * 0.35);
+            return Math.ceil(basicCost * 0.35);
         } else {
             return basicCost;
         }
     }
 
-    private double calTotalCost(){ 
+    private double calculateTotalCost() {
         return basicCost + extra;
     }
-    
+
     @Override
-    public String toString(){ 
-        return id + " "  + String.format("%.0f ", coefficient) + String.format("%.0f ", basicCost) + String.format("%.0f ", extra) + String.format("%.0f", totalCost);
+    public String toString() {
+        return id + " " + String.format("%.0f", coefficient) + " " + String.format("%.0f", basicCost) + " " + String.format("%.0f", extra) + " " + String.format("%.0f", totalCost);
     }
 }

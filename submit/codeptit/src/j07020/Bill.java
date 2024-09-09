@@ -15,8 +15,8 @@ public class Bill {
         this.customer = Customer.getCustomerMap().get(customerId);
         this.product = Product.getProductMap().get(productId);
         this.totalMoney = quantity * this.product.getSellPrice();
-        
-    }   
+    }
+
     @Override
     public String toString() {
         return id + " " + customer + product + " " + quantity + " " + totalMoney;

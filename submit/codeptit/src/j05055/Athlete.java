@@ -14,7 +14,7 @@ public class Athlete {
         Time start = new Time(startTime);
         Time end = new Time(endTime);
         this.runTime = start.timeDiff(end);
-        this.age = 2024 - Integer.parseInt(dob.substring(6));
+        this.age = 2021 - Integer.parseInt(dob.substring(6));
         this.priorityTime = calPriorityTime();
         this.finalTime = calFinalTime();
         count++;

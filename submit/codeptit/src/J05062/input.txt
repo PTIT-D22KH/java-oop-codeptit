@@ -1,0 +1,9 @@
+4 2
+Nguyen Van Nam
+3.59 75
+Tran Hong Ngoc
+3.61 90
+Do Van An
+3.22 90
+Vu Cong Tuan Duong
+3.61 90

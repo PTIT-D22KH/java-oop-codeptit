@@ -16,30 +16,28 @@ public class j07011 {
         Scanner input = new Scanner(new File("VANBAN.in"));
         int n = Integer.parseInt(input.nextLine());
         Map<String, Integer> mp = new TreeMap<>();
-        for (int i = 0; i < n; i++ ){
-            String s = input.nextLine();
-            String a[] = s.split("[,\\.?\\!:\\;\\(-\\/\\s]");
-            for (int j = 0; j < a.length; j++) {
-                String temp = a[j].toLowerCase();
-                // System.out.println(temp);
-                if (mp.containsKey(temp)) {
-                    int count = mp.get(temp);
-                    mp.replace(temp, ++count);
-                } else {
-                    mp.put(temp, 1);
+        for (int i = 0; i < n; i++) {
+            String s = input.nextLine().toLowerCase();
+            String[] a = s.split("\\W+");
+            for (String temp : a) {
+                if (temp.length() > 0) {
+                    if (mp.containsKey(temp)) {
+                        int count = mp.get(temp);
+                        mp.replace(temp, ++count);
+                    } else {
+                        mp.put(temp, 1);
+                    }
                 }
             }
         }
         ArrayList<Word> words = new ArrayList<>();
-        for(String x : mp.keySet()) {
+        for (String x : mp.keySet()) {
             words.add(new Word(x, mp.get(x)));
         }
         Collections.sort(words, new CompareByFre());
         for (Word x : words) {
             System.out.println(x);
         }
-        
-
         input.close();
     }
 }
