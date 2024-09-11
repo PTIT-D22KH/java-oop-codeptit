@@ -8,23 +8,29 @@ public class J07040 {
         ArrayList<String> a = (ArrayList<String>) input1.readObject();
         input1.close();
 
-        Set<String> res = new HashSet<>();
+        Set<String> se1 = new HashSet<>();
         for (String x : a) {
-            res.add(x.toLowerCase());
+            String words[] = x.trim().toLowerCase().split("\\s+");
+            for (String word : words) {
+                se1.add(word);
+            }
+            
         }
 
-        Set<String> b = new HashSet<>();
+        Set<String> res = new LinkedHashSet<>();
         Scanner input2 = new Scanner(new File("VANBAN.in"));
         while(input2.hasNextLine()) {
             String s = input2.nextLine().trim().toLowerCase();
             String words[] = s.split("\\s+");
             for (String word : words) {
-                b.add(word);
+                
+                if (se1.contains(word)) {
+                    res.add(word);
+                }
             }
         }
         input2.close();
         
-        res.addAll(b);
         for (String x : res) {
             System.out.println(x);
         }
