@@ -18,9 +18,17 @@ public class J07085 {
 
             }
             String x = temp.toString();
+            if (x.length() == 0) {
+                continue;
+            }
+            int j = 0;
+            while(j < x.length() && x.charAt(j) == '0') {
+                j++;
+            }
+            x = x.substring(j);
             int y = 0;
             for (int i = 0; i < x.length(); i++) {
-                y += Integer.valueOf(x.charAt(i));
+                y += x.charAt(i) - '0';
             }
             b.add(x);
             res.add(y);
