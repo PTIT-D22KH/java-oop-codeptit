@@ -12,13 +12,14 @@ public class J02027 {
             for (int i = 0; i < n; i++) {
                 a[i] = input.nextInt();
             }
+            Arrays.sort(a);
             long count = 0;
+            int j = 0;
             for (int i = 0; i < n; i++) {
-                for (int j = i + 1; j < n; j++){ 
-                    if (Math.abs(a[j] - a[i]) < k) {
-                        count++;
-                    }
+                while (j < n && a[j] - a[i] < k) {
+                    j++;
                 }
+                count += j - i - 1;
             }
             System.out.println(count);
         }
