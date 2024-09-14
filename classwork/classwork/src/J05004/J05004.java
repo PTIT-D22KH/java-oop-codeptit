@@ -1,7 +1,7 @@
-package J05005;
+package J05004;
 import java.text.ParseException;
 import java.util.*;
-public class J05005 {
+public class J05004 {
     public static void main(String[] args) throws NumberFormatException, ParseException {
         // Write your code here
         Scanner input = new Scanner(System.in);
