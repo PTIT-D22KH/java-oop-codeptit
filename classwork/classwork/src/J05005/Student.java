@@ -10,7 +10,7 @@ public class Student {
     private SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
     public Student(String name, String className, String dob, double gpa) throws ParseException{
         count++;
-        this.id = String.format("B20DCCN%02d", count);
+        this.id = String.format("B20DCCN%03d", count);
         this.name = formatName(name);
         this.className = className;
         this.dobDate = sd.parse(dob);
