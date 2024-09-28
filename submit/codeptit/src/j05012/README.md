@@ -1,13 +1,10 @@
-## ./j05012
-![alt text](image.png)
 
-- [Bill.class](Bill.class)
+## J05012
+![alt text](image.png)
+![alt text](image-1.png)
 - [Bill.java](Bill.java)
-- [CompareByTotalPrice.class](CompareByTotalPrice.class)
 - [input.txt](input.txt)
-- [j05012.class](j05012.class)
-- [j05012.java](j05012.java)
-- [j05012.mdj](j05012.mdj)
-- [Main.jpg](Main.jpg)
+- [J05012.java](J05012.java)
 - [output.txt](output.txt)
+- [Product.java](Product.java)
 - [README.md](README.md)
