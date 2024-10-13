@@ -4,8 +4,8 @@ import java.io.*;
 public class J07054 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        Scanner input = new Scanner(new File("J07054/BANGDIEM.in"));
-        // Scanner input = new Scanner(new File("BANGDIEM.in"));
+        // Scanner input = new Scanner(new File("J07054/BANGDIEM.in"));
+        Scanner input = new Scanner(new File("BANGDIEM.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for(int i = 0; i < n; i++) {
