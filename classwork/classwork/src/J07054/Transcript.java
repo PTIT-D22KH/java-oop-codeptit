@@ -13,7 +13,7 @@ public class Transcript implements Comparable<Transcript>{
         this.avgScore = calAvgScore(score1, score2, score3);
     }
     private double calAvgScore(int score1, int score2, int score3) {
-        return (score1 + score2 + score3) / 3.0;
+        return (score1 * 3.0 + score2 * 3.0 + score3 * 2.0) / 8.0;
     }
     private String formatName(String s) {
         String a[] = s.trim().toLowerCase().split("\\s+");

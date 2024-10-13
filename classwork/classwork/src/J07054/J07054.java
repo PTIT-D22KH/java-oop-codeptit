@@ -4,8 +4,8 @@ import java.io.*;
 public class J07054 {
     public static void main(String[] args) throws IOException{
         // Write your code here
-        // Scanner input = new Scanner(new File("J07054/BANGDIEM.in"));
-        Scanner input = new Scanner(new File("BANGDIEM.in"));
+        Scanner input = new Scanner(new File("J07054/BANGDIEM.in"));
+        // Scanner input = new Scanner(new File("BANGDIEM.in"));
         int n = Integer.parseInt(input.nextLine());
         ArrayList<Transcript> transcripts = new ArrayList<>();
         for(int i = 0; i < n; i++) {
@@ -13,11 +13,15 @@ public class J07054 {
         }
         Collections.sort(transcripts);
         int rank = 1;
+        double currScore = transcripts.get(0).getAvgScore();
         for (int i = 0; i < n; i++) {
-            if (i == 0 || transcripts.get(i).getAvgScore() != transcripts.get(i - 1).getAvgScore()) {
+            if (transcripts.get(i).getAvgScore() == currScore) {
+                transcripts.get(i).setRank(rank);
+            } else {
+                transcripts.get(i).setRank(i + 1);
                 rank = i + 1;
+                currScore = transcripts.get(i).getAvgScore();
             }
-            transcripts.get(i).setRank(rank);
         }
         for (Transcript x : transcripts) {
             System.out.println(x);
