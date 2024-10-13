@@ -5,7 +5,7 @@ public class HandlingExceptionThrowsCatch {
         // Write your code here
         int d = 0;
         try {
-            int d = SoNguyen.nhapDiem();
+            d = SoNguyen.nhapDiem();
         } catch (DiemException e) {
             e.getLocalizedMessage();
         }
