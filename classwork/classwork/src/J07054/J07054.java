@@ -13,15 +13,11 @@ public class J07054 {
         }
         Collections.sort(transcripts);
         int rank = 1;
-        double currScore = transcripts.get(0).getAvgScore();
         for (int i = 0; i < n; i++) {
-            if (transcripts.get(i).getAvgScore() == currScore) {
-                transcripts.get(i).setRank(rank);
-            } else {
-                transcripts.get(i).setRank(i + 1);
+            if (i == 0 || transcripts.get(i).getAvgScore() != transcripts.get(i - 1).getAvgScore()) {
                 rank = i + 1;
-                currScore = transcripts.get(i).getAvgScore();
             }
+            transcripts.get(i).setRank(rank);
         }
         for (Transcript x : transcripts) {
             System.out.println(x);
